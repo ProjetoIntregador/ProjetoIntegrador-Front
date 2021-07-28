@@ -12,9 +12,9 @@ import { MenuComponent } from './menu/menu.component';
   declarations: [
     AppComponent,
     EntrarComponent,
-    PostagensComponent
+    PostagensComponent,
     CadastrarComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
