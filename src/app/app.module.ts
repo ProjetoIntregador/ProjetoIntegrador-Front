@@ -10,9 +10,13 @@ import { PostagensComponent } from './postagens/postagens.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { MenuComponent } from './menu/menu.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './inicio/inicio.component';
+=======
+import { HomeComponent } from './home/home.component';
+>>>>>>> c9fd50b7e5bd02c3562c368ee07637bddd499c24
 =======
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -26,8 +30,16 @@ import { RodapeComponent } from './rodape/rodape.component';
     PostagensComponent,
     CadastrarComponent,
     MenuComponent,
+<<<<<<< HEAD
     RodapeComponent,
     InicioComponent
+=======
+<<<<<<< HEAD
+    HomeComponent,
+=======
+    RodapeComponent
+>>>>>>> 96e1b1dcc1f457e9559d3a9e62cd47404863b9d1
+>>>>>>> c9fd50b7e5bd02c3562c368ee07637bddd499c24
   ],
   imports: [
     BrowserModule,
