@@ -10,9 +10,13 @@ const routes: Routes = [
 
   { path: 'entrar', component:EntrarComponent },
   { path: 'cadastrar', component: CadastrarComponent},
+<<<<<<< HEAD
   {path: ' postagem', component: PostagensComponent},
   {path: 'home', component: HomeComponent},
   
+=======
+  {path: 'postagem', component: PostagensComponent}
+>>>>>>> 96e1b1dcc1f457e9559d3a9e62cd47404863b9d1
 
 ];
 
