@@ -7,6 +7,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
     PostagensComponent,
     CadastrarComponent,
     MenuComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
