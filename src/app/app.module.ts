@@ -1,3 +1,5 @@
+import { RodapeComponent } from './rodape/rodape.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,6 +9,8 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { MenuComponent } from './menu/menu.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,10 +19,13 @@ import { MenuComponent } from './menu/menu.component';
     PostagensComponent,
     CadastrarComponent,
     MenuComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

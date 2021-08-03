@@ -32,7 +32,7 @@ export class AuthService {
     }
 
 
-    return ok 
+    return ok
   }
 
 }
