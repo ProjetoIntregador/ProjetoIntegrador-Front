@@ -1,3 +1,4 @@
+import { InicioComponent } from './inicio/inicio.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -10,13 +11,10 @@ const routes: Routes = [
 
   { path: 'entrar', component:EntrarComponent },
   { path: 'cadastrar', component: CadastrarComponent},
-<<<<<<< HEAD
-  {path: ' postagem', component: PostagensComponent},
+  {path: 'postagem', component: PostagensComponent},
   {path: 'home', component: HomeComponent},
-  
-=======
-  {path: 'postagem', component: PostagensComponent}
->>>>>>> 96e1b1dcc1f457e9559d3a9e62cd47404863b9d1
+  {path: 'inicio', component: InicioComponent}
+
 
 ];
 

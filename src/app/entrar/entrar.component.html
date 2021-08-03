@@ -5,10 +5,10 @@
       <label for="email">Email</label>
       <input [(ngModel)]='usuarioLogin.email' type="text" name="email" id="email" placeholder="Digite seu e-mail">
 
-      <label for="">Senha</label>
-      <input [(ngModel)]='usuarioLogin.senha' type="password">
+      <label for="senha">Senha</label>
+      <input [(ngModel)]='usuarioLogin.senha' type="password" name="senha" id="senha" placeholder="Digite sua senha">
 
-      <button type="submit">Entrar</button>
+      <button type="submit" (click)='entrar()'>Entrar</button>
 
       <p>Caso não tenha cadastro<a routerLink='/cadastrar'>Cadastre-se</a></p>
     </form>
