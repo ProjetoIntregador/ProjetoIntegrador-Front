@@ -1,0 +1,8 @@
+#img-bg{
+    background-image: url('https://f.i.uol.com.br/fotografia/2021/05/31/162248004960b514b1d1fc6_1622480049_3x2_md.jpg');
+    height: 100vh;
+    /*min-height: 695px;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
