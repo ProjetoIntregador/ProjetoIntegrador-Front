@@ -9,8 +9,14 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { MenuComponent } from './menu/menu.component';
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RodapeComponent } from './rodape/rodape.component';
+>>>>>>> 96e1b1dcc1f457e9559d3a9e62cd47404863b9d1
 
 @NgModule({
   declarations: [

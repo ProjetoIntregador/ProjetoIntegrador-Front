@@ -9,7 +9,7 @@ const routes: Routes = [
 
   { path: 'entrar', component:EntrarComponent },
   { path: 'cadastrar', component: CadastrarComponent},
-  {path: ' postagem', component: PostagensComponent}
+  {path: 'postagem', component: PostagensComponent}
 
 ];
 
