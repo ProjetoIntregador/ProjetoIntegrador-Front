@@ -3,12 +3,12 @@
 
     <form action="" class="d-flex flex-column">
       <label for="email">Email</label>
-      <input [(ngModel)]='usuarioLogin.email' type="text">
+      <input [(ngModel)]='usuarioLogin.email' type="text" name="email" id="email" placeholder="Digite seu e-mail">
 
       <label for="">Senha</label>
       <input [(ngModel)]='usuarioLogin.senha' type="password">
 
-      <button>Entrar</button>
+      <button type="submit">Entrar</button>
 
       <p>Caso não tenha cadastro<a routerLink='/cadastrar'>Cadastre-se</a></p>
     </form>

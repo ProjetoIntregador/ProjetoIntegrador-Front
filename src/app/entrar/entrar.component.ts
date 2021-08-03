@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UsuarioLogin } from './../model/UsuarioLogin';
 
 import { Component, OnInit } from '@angular/core';
@@ -14,7 +15,8 @@ export class EntrarComponent implements OnInit {
   usuarioLogin: UsuarioLogin = new UsuarioLogin()
 
   constructor(
-    private auth: AuthService
+    private auth: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,7 +26,7 @@ export class EntrarComponent implements OnInit {
    entrar(){
      this.auth.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=>{
        this.usuarioLogin = resp
-       
+       this.router.navigate(['/inicio'])
      })
    }
 

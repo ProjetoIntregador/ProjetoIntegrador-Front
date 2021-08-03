@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 <<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { InicioComponent } from './inicio/inicio.component';
 =======
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +26,8 @@ import { RodapeComponent } from './rodape/rodape.component';
     PostagensComponent,
     CadastrarComponent,
     MenuComponent,
-    RodapeComponent
+    RodapeComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
