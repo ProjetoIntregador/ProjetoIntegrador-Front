@@ -12,7 +12,7 @@ export class CadastrarComponent implements OnInit {
 
   usuario: Usuario = new Usuario
   confirmarSenha: string
-  tipoUsuario: boolean //trocar para string para ter adm
+  tipoUsuario: string //trocar para string para ter adm
 
   constructor(
     private authService: AuthService,
@@ -38,8 +38,8 @@ export class CadastrarComponent implements OnInit {
       alert('A senha esta incorreta.')
     }else{
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
-       
-        this.usuario = resp  
+
+        this.usuario = resp
         console.log(this.usuario)
         this.router.navigate(['/entrar'])
         alert('Usuario cadastrado com sucesso')

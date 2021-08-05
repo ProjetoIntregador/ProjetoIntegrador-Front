@@ -15,13 +15,13 @@
             <div class="row d-flex justify-content-center mt-4 mb-5">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <input [(ngModel)]='categoria.tipotrabalho' type="text" class="form-control" id="tipotrabalho" placeholder="Digite a tipo de trabalho">
+                        <input [(ngModel)]='categoria.tipotrabalho' type="text" class="form-control" name="tipotrabalho" id="tipotrabalho" placeholder="Digite a tipo de trabalho">
                     </div>
                     <div class="form-group">
-                      <input [(ngModel)]='categoria.descricao' type="text" class="form-control" id="tipotrabalho" placeholder="Digite a descrição do trabalho">
+                      <input [(ngModel)]='categoria.descricao' type="text" class="form-control" name="descricao" id="descricao" placeholder="Digite a descrição do trabalho">
                   </div>
                   <div class="form-group">
-                    <input [(ngModel)]='categoria.palavrachave' type="text" class="form-control" id="tipotrabalho" placeholder="Digite a palavra chave referente ao tema">
+                    <input [(ngModel)]='categoria.palavrachave' type="text" class="form-control" name="palavrachave" id="palavrachave" placeholder="Digite a palavra chave referente ao tema">
                 </div>
 
                     <div class="d-flex justify-content-center">
@@ -38,7 +38,7 @@
 </div>
 
 
-<!--<div class="container">
+<div class="container">
 
     <div class="row mt-5">
         <div class="col-md-12">
@@ -60,7 +60,7 @@
                 </thead>
 
                 <tbody>
-                    <tr *ngFor='let item of listaTemas'>
+                    <tr *ngFor='let item of listaCategoria'>
                         <th>{{item.id}}</th>
                         <td>{{item.descricao}}</td>
                         <td class="d-flex justify-content-end">
@@ -76,4 +76,4 @@
         </div>
     </div>
 
-</div> -->
+</div>
