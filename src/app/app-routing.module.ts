@@ -5,6 +5,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
 import { PostagensComponent } from './postagens/postagens.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 const routes: Routes = [
   {path: '' , redirectTo:'entrar', pathMatch: 'full'},
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'cadastrar', component: CadastrarComponent},
   {path: 'postagem', component: PostagensComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'inicio', component: InicioComponent}
+  {path: 'inicio', component: InicioComponent},
+  {path: 'categoria', component: CategoriaComponent}
 
 
 ];
