@@ -8,7 +8,7 @@
             <i class="fa fa-angle-double-left" aria-hidden='true'></i>
             início
             </a>
-            <h1 class="fs-54 text-center">Temas</h1>
+            <h1 class="fs-54 text-center">Categorias</h1>
             <h5 class="fs-18 text-center"> Veja todos os temas cadastrados ou cadastre um novo:
             </h5>
 
@@ -53,25 +53,26 @@
                 <thead>
                   <tr>
                     <th scope="col">Id</th>
+                    <th scope="col">Trabalho</th>
                     <th scope="col">Descrição</th>
                     <th scope="col" class="text-right">Modificação</th>
-
+                    
                   </tr>
                 </thead>
 
                 <tbody>
                     <tr *ngFor='let item of listaCategoria'>
                         <th>{{item.id}}</th>
+                        <td>{{item.tipotrabalho}}</td>
                         <td>{{item.descricao}}</td>
                         <td class="d-flex justify-content-end">
                             <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', item.id]">Editar</button>
                             <button class="btn btn-danger"  [routerLink]="['/tema-delete', item.id]">Apagar</button>
                         </td>
-
+                    
                     </tr>
                 </tbody>
             </table>
-
 
         </div>
     </div>
