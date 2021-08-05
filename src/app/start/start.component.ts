@@ -3,24 +3,20 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  selector: 'app-start',
+  templateUrl: './start.component.html',
+  styleUrls: ['./start.component.css']
 })
-export class InicioComponent implements OnInit {
-
-
-  constructor(
-    private router: Router
-  ) { }
-
+export class StartComponent implements OnInit {
+  private router: Router
+  constructor() { }
 
   ngOnInit() {
     if (environment.token == ''){
       alert('Sua seção expirou, faça o login novamente!')
 
-      this.router.navigate(['/entrar'])
-    }
+      this.router.navigate(['/entrar'])}
+
   }
 
 }

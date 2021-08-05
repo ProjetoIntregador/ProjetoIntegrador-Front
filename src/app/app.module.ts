@@ -11,7 +11,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RodapeComponent } from './rodape/rodape.component';
-import { CategoriaComponent } from  './categoria/categoria.component'
+import { CategoriaComponent } from  './categoria/categoria.component';
+import { StartComponent } from './start/start.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CategoriaComponent } from  './categoria/categoria.component'
     CadastrarComponent,
     MenuComponent,
     RodapeComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,

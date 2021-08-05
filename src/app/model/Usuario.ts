@@ -8,6 +8,6 @@ export class Usuario{
     public datanascimento: Date
     public genero: string
     public foto: string   //lembrar de fazer input com .jpeg configurado
-    public empregador: boolean
+    public empregador: string
     public produto: Produto[]
 }

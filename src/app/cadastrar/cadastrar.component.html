@@ -24,7 +24,7 @@
                         <label for="email">Email</label>
                         <input class="form-control" type="email" name="Email" id="Email" placeholder="Digite seu email">
                     </div>
-
+                    <!--NÃO ESQUECER DE COLOCAR O CAMPO IMAGEM COM O JPG PADRÃO NO INPUT-->
                     <div class="form-group">
                         <label for="confirmSenha">Confirme seu Email:</label>
                         <input [(ngModel)]='usuario.email' class="form-control" type="email" name="confirmEmail"
@@ -47,8 +47,8 @@
                         <label for="tipoUsuario">Tipo de Usuário:</label>
                         <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
                             <option>Selecione um tipo de usuário:</option>
-                            <option value=false>Candidato</option>
-                            <option value=true>Empregador</option>
+                            <option value="candidato">Candidato</option>
+                            <option value="empregador">Empregador</option>
                         </select>
                     </div>
                     <button class="btn btn-danger me-4" routerLink='/entrar'>Cancelar</button>
