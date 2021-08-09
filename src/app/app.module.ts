@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CategoriaComponent } from  './categoria/categoria.component';
 import { StartComponent } from './start/start.component';
+import { CategoriaEditeComponent } from './edite/categoria-edite/categoria-edite.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { StartComponent } from './start/start.component';
     MenuComponent,
     RodapeComponent,
     CategoriaComponent,
-    StartComponent
+    StartComponent,
+    CategoriaEditeComponent,
+    CategoriaDeleteComponent
   ],
   imports: [
     BrowserModule,

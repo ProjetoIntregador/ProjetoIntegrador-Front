@@ -19,7 +19,7 @@ export class CategoriaService {
   }
 
   getByIdCategoria(id: number):Observable<Categoria>{
-    return this.http.get<Categoria>('https://queryjobs.herokuapp.com/categoria/${id}', this.token)
+    return this.http.get<Categoria>(`https://queryjobs.herokuapp.com/categoria/${id}`, this.token)
 
   }
 
@@ -27,5 +27,11 @@ export class CategoriaService {
     return this.http.post<Categoria>('https://queryjobs.herokuapp.com/categoria', categoria, this.token)
   }
 
+  putCategoria(categoria: Categoria): Observable<Categoria>{
+    return this.http.put<Categoria>('https://queryjobs.herokuapp.com/categoria', categoria, this.token)
+  }
 
+  deleteCategoria(id:number){
+    return this.http.delete<Categoria>(`https://queryjobs.herokuapp.com/categoria/${id}`, this.token)
+  }
 }

@@ -9,7 +9,7 @@
             início
             </a>
             <h1 class="fs-54 text-center">Categorias</h1>
-            <h5 class="fs-18 text-center"> Veja todos os temas cadastrados ou cadastre um novo:
+            <h5 class="fs-18 text-center"> Veja todos as categorias cadastrados ou cadastre um novo:
             </h5>
 
             <div class="row d-flex justify-content-center mt-4 mb-5">
@@ -21,7 +21,7 @@
                       <input [(ngModel)]='categoria.descricao' type="text" class="form-control" name="descricao" id="descricao" placeholder="Digite a descrição do trabalho">
                   </div>
                   <div class="form-group">
-                    <input [(ngModel)]='categoria.palavrachave' type="text" class="form-control" name="palavrachave" id="palavrachave" placeholder="Digite a palavra chave referente ao tema">
+                    <input [(ngModel)]='categoria.palavrachave' type="text" class="form-control" name="palavrachave" id="palavrachave" placeholder="Digite a palavra chave referente a categoria">
                 </div>
 
                     <div class="d-flex justify-content-center">
@@ -42,7 +42,7 @@
 
     <div class="row mt-5">
         <div class="col-md-12">
-            <h2 class="text-center">Todos os temas</h2>
+            <h2 class="text-center">Todos as categorias</h2>
         </div>
     </div>
 
@@ -66,8 +66,8 @@
                         <td>{{item.tipotrabalho}}</td>
                         <td>{{item.descricao}}</td>
                         <td class="d-flex justify-content-end">
-                            <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', item.id]">Editar</button>
-                            <button class="btn btn-danger"  [routerLink]="['/tema-delete', item.id]">Apagar</button>
+                            <button class="btn btn-info mr-3" [routerLink]="['/categoria-edite', item.id]">Editar</button>
+                            <button class="btn btn-danger"  [routerLink]="['/categoria-delete', item.id]">Apagar</button>
                         </td>
                     
                     </tr>
