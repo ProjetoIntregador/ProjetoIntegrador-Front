@@ -30,6 +30,8 @@ export class EntrarComponent implements OnInit {
        this.usuarioLogin = resp
 
        environment.token = this.usuarioLogin.token
+       environment.id = this.usuarioLogin.id
+       console.log(environment)
        this.router.navigate(['/start'])
      })
    }

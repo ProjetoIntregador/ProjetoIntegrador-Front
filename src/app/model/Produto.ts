@@ -8,6 +8,7 @@ export class Produto{
     public valor: number // perguntar professor "number" correto ?
     public experiencia: string
     public imagem: string
+    public especificacao: string
     public usuario: Usuario
     public categoria: Categoria
 

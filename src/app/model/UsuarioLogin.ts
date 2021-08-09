@@ -4,7 +4,7 @@ export class UsuarioLogin{
     public id: number
     public nomeusuario: string
     public senha: string
-    public empregador: boolean
+    public empregador: string
     public datanascimento: Date
     public email: string
     public genero: string
