@@ -6,6 +6,7 @@ import { CategoriaService } from '../service/categoria.service';
 import { Categoria } from '../model/Categoria';
 import { Usuario } from '../model/Usuario';
 import { ProdutoService } from '../service/produto.service';
+import { AuthService } from '../service/auth.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class StartComponent implements OnInit {
 
   listaProduto:Produto[]
   produto: Produto = new Produto()
-  
+
   categoria: Categoria = new Categoria
   listaCategoria: Categoria[]
   idCategoria: number
@@ -25,12 +26,13 @@ export class StartComponent implements OnInit {
   usuario: Usuario= new Usuario
   idUsuario = environment.id
 
-  private router: Router
+
   constructor(
-  
+    private router: Router,
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService
-  
+    private produtoService: ProdutoService,
+    private authService: AuthService
+
   ) { }
 
   ngOnInit() {
@@ -54,7 +56,7 @@ export class StartComponent implements OnInit {
 
     findByIdCategoria(){
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
-    this.categoria = resp
+      this.categoria = resp
       })
     }
 
@@ -65,6 +67,11 @@ export class StartComponent implements OnInit {
     })
   }
 
+  findByIdUsuario(){
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp:Usuario)=>{
+      this.usuario = resp
+    })
+  }
 
   publicar(){
     this.categoria.id = this.idCategoria
