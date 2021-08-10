@@ -8,6 +8,8 @@ import { PostagensComponent } from './postagens/postagens.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditeComponent } from './edite/categoria-edite/categoria-edite.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { ProdEditComponent } from './edite/prod-edit/prod-edit.component';
+import { ProdDeleteComponent } from './delete/prod-delete/prod-delete.component';
 
 const routes: Routes = [
   {path: '' , redirectTo:'entrar', pathMatch: 'full'},
@@ -20,7 +22,8 @@ const routes: Routes = [
   {path: 'categoria', component: CategoriaComponent},
   {path: 'categoria-edite/:id', component: CategoriaEditeComponent},
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
-
+  {path:  'produto-edit/:id', component: ProdEditComponent},
+  {path: 'produto-delete/:id',component: ProdDeleteComponent}
 ];
 
 @NgModule({
