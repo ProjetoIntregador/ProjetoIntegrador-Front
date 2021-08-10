@@ -14,16 +14,16 @@ export class CategoriaComponent implements OnInit {
   categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
 
-  constructor( 
+  constructor(
     private router: Router,
     private categoriaService: CategoriaService
     ) { }
 
   ngOnInit(){
-  if(environment.token == ''){
-    // alert('sua sessão expirou, faça o login novamente.')
-    this.router.navigate(['/entrar'])
-  } 
+  // if(environment.token == ''){
+  //   // alert('sua sessão expirou, faça o login novamente.')
+  //   this.router.navigate(['/entrar'])
+  // } 
     this.findAllCategoria()
   }
 

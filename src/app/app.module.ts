@@ -15,6 +15,9 @@ import { CategoriaComponent } from  './categoria/categoria.component';
 import { StartComponent } from './start/start.component';
 import { CategoriaEditeComponent } from './edite/categoria-edite/categoria-edite.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+z
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { ProdutoComponent } from './edite/produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
     CategoriaComponent,
     StartComponent,
     CategoriaEditeComponent,
-    CategoriaDeleteComponent
+    CategoriaDeleteComponent,
+    PostagemEditeComponent,
+    PostagemDeleteComponent,
   ],
   imports: [
     BrowserModule,

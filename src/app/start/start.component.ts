@@ -36,11 +36,11 @@ export class StartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (environment.token == ''){
-      alert('Sua seção expirou, faça o login novamente!')
+    // if (environment.token == ''){
+    //   alert('Sua seção expirou, faça o login novamente!')
 
-      this.router.navigate(['/entrar'])
-    }
+    //   this.router.navigate(['/entrar'])
+    // }
       this.getAllProduto()
       this.getAllCategoria()
     }

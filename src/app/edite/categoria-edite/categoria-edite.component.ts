@@ -18,11 +18,11 @@ export class CategoriaEditeComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit(){ 
-    if (environment.token == ''){
-      alert('Sua sessão expirou')
-      this.router.navigate(['/entrar'])
-    }
+  ngOnInit(){
+    // if (environment.token == ''){
+    //   alert('Sua sessão expirou')
+    //   this.router.navigate(['/entrar'])
+    // }
     let id = this.route.snapshot.params['id']
     this.findByIdCategoria(id)
 
@@ -30,7 +30,7 @@ export class CategoriaEditeComponent implements OnInit {
 
   findByIdCategoria(id:number){
   this.categoriaService.getByIdCategoria(id).subscribe((resp:Categoria)=>{
-    this.categoria = resp 
+    this.categoria = resp
   })
   }
 

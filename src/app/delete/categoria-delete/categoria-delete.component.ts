@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./categoria-delete.component.css']
 })
 export class CategoriaDeleteComponent implements OnInit {
-  
+
   categoria: Categoria = new Categoria
   idCategoria: number
 
@@ -19,21 +19,21 @@ export class CategoriaDeleteComponent implements OnInit {
     private categoriaService: CategoriaService,
     private route: ActivatedRoute
   ) {}
-  
+
 
   ngOnInit(){
-    if (environment.token == ''){
-      alert('Sua sessão expirou')
-      this.router.navigate(['/entrar'])
-    }
-  
+    // if (environment.token == ''){
+    //   alert('Sua sessão expirou')
+    //   this.router.navigate(['/entrar'])
+    // }
+
     this.idCategoria = this.route.snapshot.params['id']
     this.findByIdCategoria(this.idCategoria)
   }
 
   findByIdCategoria(id:number){
     this.categoriaService.getByIdCategoria(id).subscribe((resp:Categoria)=>{
-      this.categoria = resp 
+      this.categoria = resp
     })
     }
 
