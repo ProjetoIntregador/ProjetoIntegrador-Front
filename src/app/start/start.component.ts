@@ -30,7 +30,7 @@ export class StartComponent implements OnInit {
 
   constructor(
     
-    
+    private router: Router,
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
     private authService: AuthService,
@@ -76,11 +76,6 @@ export class StartComponent implements OnInit {
     })
   }
 
-  findByIdUsuario(){
-    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
-      this.usuario = resp
-    })
-  }
 
 
 
@@ -94,7 +89,7 @@ export class StartComponent implements OnInit {
      console.log(this.produto)
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
       this.produto = resp
-      this.alertas.showAlertSuccess('Postagem realizada com sucesso!!!')
+      this.alertas.showAlertSuccess('vaga postada com sucesso!!!')
       this.produto = new Produto()
       this.getAllProduto()
     })
