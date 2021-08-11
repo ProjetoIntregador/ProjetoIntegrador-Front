@@ -28,13 +28,13 @@
   <nav>
     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
-      <a class="nav-link active text-warning font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+      <a class="nav-link active text-warning font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#nav-todasAsVagas"
         role="tab" aria-controls="nav-TodasVagas" aria-selected="true">Todas Vagas</a>
 
       <a (click)='findByIdUsuario()' class="nav-link text-dark font-weight-bold" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
         role="tab" aria-controls="nav-profile" aria-selected="false">Minhas vagas</a>
 
-      <a class="nav-link text-dark font-weight-bold" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+      <a class="nav-link text-dark font-weight-bold" id="nav-contact-tab" data-toggle="tab" href="#nav-porCategoria"
         role="tab" aria-controls="nav-contact" aria-selected="false">vagas por categoria</a>
 
     </div>
@@ -42,21 +42,24 @@
 
   <div class="tab-content" id="nav-tabContent">
 
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-pane fade show active" id="nav-todasAsVagas" role="tabpanel" aria-labelledby="nav-todasAsVagas-tab">
 
    <!--Card todas as vagas-->
    <div  class="card-columns">
     <div class="card" *ngFor='let item of listaProduto'>
-      <img src="{{item.imagem}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Categoria: {{item.categoria.descricao}}</h5>
         <p class="card-text">Experiencia: {{item.experiencia}}</p>
         <p class="card-text">Valor: R$ {{item.valor}}</p>
         <p class="card-text"><small class="text-muted"> by: {{item.usuario.nomeusuario}}</small></p>
+        <!-- precisamos colocar uma variavel de data no produto do back end e linkar aqui -->
+        <a [routerLink]="['/produto-edit',item.id]" class="text-info me-3" href="">Editar</a>
+          <a  [routerLink]="['/produto-delete',item.id]" class="text-danger" href="">Apagar</a>
+
       </div>
     </div>
   </div>
-<!--termino do card todas vagas-->  
+<!--termino do card todas vagas-->
 
 
 </div>

@@ -19,7 +19,7 @@ export class StartComponent implements OnInit {
 
   listaProduto:Produto[]
   produto: Produto = new Produto()
-  
+
   categoria: Categoria = new Categoria
   listaCategoria: Categoria[]
   idCategoria: number
@@ -27,7 +27,7 @@ export class StartComponent implements OnInit {
   usuario: Usuario= new Usuario
   idUsuario = environment.id
 
-  private router: Router
+
   constructor(
     
     
@@ -59,7 +59,7 @@ export class StartComponent implements OnInit {
 
     findByIdCategoria(){
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
-    this.categoria = resp
+      this.categoria = resp
       })
     }
 
@@ -70,6 +70,11 @@ export class StartComponent implements OnInit {
     })
   }
 
+  findByIdUsuario(){
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp:Usuario)=>{
+      this.usuario = resp
+    })
+  }
 
   findByIdUsuario(){
     this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
