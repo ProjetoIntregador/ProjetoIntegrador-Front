@@ -6,6 +6,8 @@ import { CategoriaService } from '../service/categoria.service';
 import { Categoria } from '../model/Categoria';
 import { Usuario } from '../model/Usuario';
 import { ProdutoService } from '../service/produto.service';
+import { AuthService } from '../service/auth.service';
+import { AlertasService } from '../service/alertas.service';
 
 
 @Component({
@@ -27,16 +29,19 @@ export class StartComponent implements OnInit {
 
   private router: Router
   constructor(
-  
+    
+    
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private authService: AuthService,
+    private alertas: AlertasService
   
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if (environment.token == ''){
-      alert('Sua seção expirou, faça o login novamente!')
-
+      this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente!')
       this.router.navigate(['/entrar'])
     }
       this.getAllProduto()
@@ -66,6 +71,15 @@ export class StartComponent implements OnInit {
   }
 
 
+  findByIdUsuario(){
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+    })
+  }
+
+
+
+
   publicar(){
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
@@ -75,7 +89,7 @@ export class StartComponent implements OnInit {
      console.log(this.produto)
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
       this.produto = resp
-      alert('Postagem realizada com sucesso!!!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!!!')
       this.produto = new Produto()
       this.getAllProduto()
     })

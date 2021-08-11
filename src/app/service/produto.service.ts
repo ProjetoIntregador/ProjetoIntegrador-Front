@@ -16,11 +16,27 @@ export class ProdutoService {
   }
 
   getAllProduto(): Observable<Produto[]>{
-    return this.http.get<Produto[]>('https://queryjobs.herokuapp.com/produto', this.token)
+    return this.http.get<Produto[]>('https://queryjobs.herokuapp.com/produto')
   }
 
-  postProduto(produto: Produto): Observable<Produto>{
-    return this.http.post<Produto>('https://queryjobs.herokuapp.com/produto', produto, this.token)
+  getByIdProduto(id: number): Observable<Produto>{
+    return this.http.get<Produto>(`https://queryjobs.herokuapp.com/produto/${id}`)
   }
+  
+  deleteProduto(id: number){
+    return this.http.delete(`https://queryjobs.herokuapp.com/produto/${id}`)
+  }
+
+
+
+  postProduto(produto: Produto): Observable<Produto>{
+    return this.http.post<Produto>('https://queryjobs.herokuapp.com/produto', produto)
+  }
+
+  putProduto(produto: Produto): Observable<Produto>{
+    return this.http.put<Produto>('https://queryjobs.herokuapp.com/produto', produto )
+  }
+
+
 
 }

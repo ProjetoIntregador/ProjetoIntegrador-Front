@@ -15,23 +15,23 @@ export class CategoriaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
   getAllCategoria(): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>('https://queryjobs.herokuapp.com/categoria', this.token)
+    return this.http.get<Categoria[]>('https://queryjobs.herokuapp.com/categoria')
   }
 
   getByIdCategoria(id: number):Observable<Categoria>{
-    return this.http.get<Categoria>(`https://queryjobs.herokuapp.com/categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`https://queryjobs.herokuapp.com/categoria/${id}`)
 
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria>{
-    return this.http.post<Categoria>('https://queryjobs.herokuapp.com/categoria', categoria, this.token)
+    return this.http.post<Categoria>('https://queryjobs.herokuapp.com/categoria', categoria)
   }
 
   putCategoria(categoria: Categoria): Observable<Categoria>{
-    return this.http.put<Categoria>('https://queryjobs.herokuapp.com/categoria', categoria, this.token)
+    return this.http.put<Categoria>('https://queryjobs.herokuapp.com/categoria', categoria)
   }
 
   deleteCategoria(id:number){
-    return this.http.delete<Categoria>(`https://queryjobs.herokuapp.com/categoria/${id}`, this.token)
+    return this.http.delete<Categoria>(`https://queryjobs.herokuapp.com/categoria/${id}`)
   }
 }

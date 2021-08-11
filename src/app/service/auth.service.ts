@@ -24,6 +24,12 @@ export class AuthService {
 
   }
 
+  getByIdUsuario(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`https://queryjobs.herokuapp.com/usuarios/${id}`)
+  }
+
+
+
   logado(){
     let ok:boolean = false
 
@@ -34,5 +40,12 @@ export class AuthService {
 
     return ok
   }
+
+  atualizar(usuario: Usuario):Observable<Usuario>{
+    return this.http.put<Usuario>('https://queryjobs.herokuapp.com/usuarios/alterar', usuario)
+    }
+
+
+
 
 }

@@ -8,6 +8,9 @@ import { PostagensComponent } from './postagens/postagens.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditeComponent } from './edite/categoria-edite/categoria-edite.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 const routes: Routes = [
   {path: '' , redirectTo:'entrar', pathMatch: 'full'},
@@ -19,7 +22,10 @@ const routes: Routes = [
   {path: 'start', component: StartComponent},
   {path: 'categoria', component: CategoriaComponent},
   {path: 'categoria-edite/:id', component: CategoriaEditeComponent},
-  {path: 'categoria-delete/:id', component: CategoriaDeleteComponent}
+  {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
+  {path: 'produto-edit/:id', component: ProdutoEditComponent},
+  {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+  {path: 'usuario-edit/:id' , component: UsuarioEditComponent},
 
 ];
 

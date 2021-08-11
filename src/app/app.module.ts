@@ -15,6 +15,11 @@ import { CategoriaComponent } from  './categoria/categoria.component';
 import { StartComponent } from './start/start.component';
 import { CategoriaEditeComponent } from './edite/categoria-edite/categoria-edite.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -27,13 +32,18 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
     CategoriaComponent,
     StartComponent,
     CategoriaEditeComponent,
-    CategoriaDeleteComponent
+    CategoriaDeleteComponent,
+    ProdutoEditComponent,
+    ProdutoDeleteComponent,
+    UsuarioEditComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,
