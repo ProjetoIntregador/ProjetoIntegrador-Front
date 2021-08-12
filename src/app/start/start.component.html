@@ -9,7 +9,7 @@
         </div>
       </div>
 
-    
+
 
       <div class="row d-flex justify-content-center mt-3 mb-5">
         <div class="col-md-6">
@@ -145,7 +145,7 @@
           <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre uma Nova</a></label>
 
           <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria' (change)='findByIdCategoria'>
-            <option *ngFor= 'let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalhox}}</option>
+            <option *ngFor= 'let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
           </select>
         </div>
       </div>

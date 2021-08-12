@@ -4,7 +4,7 @@
 
         <div class="col-md-12 text-white">
 
-            <a routerLink='/inicio' class="text-white text-left">
+            <a routerLink='/start' class="text-white text-left">
             <i class="fa fa-angle-double-left" aria-hidden='true'></i>
             início
             </a>
@@ -56,7 +56,7 @@
                     <th scope="col">Trabalho</th>
                     <th scope="col">Descrição</th>
                     <th scope="col" class="text-right">Modificação</th>
-                    
+
                   </tr>
                 </thead>
 
@@ -69,7 +69,7 @@
                             <button class="btn btn-info mr-3" [routerLink]="['/categoria-edite', item.id]">Editar</button>
                             <button class="btn btn-danger"  [routerLink]="['/categoria-delete', item.id]">Apagar</button>
                         </td>
-                    
+
                     </tr>
                 </tbody>
             </table>
