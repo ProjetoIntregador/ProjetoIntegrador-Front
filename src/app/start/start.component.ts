@@ -24,9 +24,11 @@ export class StartComponent implements OnInit {
   listaCategoria: Categoria[]
   idCategoria: number
 
-  usuario: Usuario= new Usuario
+  usuario: Usuario = new Usuario
   idUsuario = environment.id
 
+  key = 'data'
+  reverse = 'true'
 
   constructor(
     
