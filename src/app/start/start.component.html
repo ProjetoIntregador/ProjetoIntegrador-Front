@@ -13,7 +13,7 @@
         <div class="col-md-6">
           <button class="btn btn-light text-warning mr-2 font-weight-bold" data-toggle="modal"
             data-target="#novaPostagem">Nova Postagem</button>
-          <a class=" btn btn-outline-light text-light font-weight-bold" href="#postagens">Ver Postagens</a>
+          <a *ngIf='authService.empregador()' class=" btn btn-outline-light text-light font-weight-bold" href="#postagens">Ver Postagens</a>
         </div>
       </div>
     </div>
@@ -28,16 +28,16 @@
   <nav>
     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
-      <a class="nav-link active text-warning font-weight-bold" id="nav-home-tab" data-toggle="tab" 
+      <a class="nav-link active text-warning font-weight-bold" id="nav-home-tab" data-toggle="tab"
       href="#nav-todasAsVagas"
        role="tab" aria-controls="nav-TodasVagas" aria-selected="true">Todas Vagas</a>
 
-      <a (click)='findByIdUsuario()' class="nav-link text-dark font-weight-bold" 
+      <a (click)='findByIdUsuario()' class="nav-link text-dark font-weight-bold"
       id="nav-MinhasVagas-tab" data-toggle="tab" href="#nav-MinhasVagas"
       role="tab" aria-controls="nav-MinhasVagas" aria-selected="false">Minhas vagas</a>
 
-      <a  class="nav-link text-dark font-weight-bold" id="nav-VagaPorCategoria-tab" 
-      data-toggle="tab" href="#nav-VagaPorCategoria" role="tab" aria-controls="nav-VagaPorCategoria" 
+      <a  class="nav-link text-dark font-weight-bold" id="nav-VagaPorCategoria-tab"
+      data-toggle="tab" href="#nav-VagaPorCategoria" role="tab" aria-controls="nav-VagaPorCategoria"
       aria-selected="true">Vagas por categoria</a>
 
     </div>
@@ -80,7 +80,7 @@
           </div>
         </div>
       </div>
- <!--termino do card Minhas vagas--> 
+ <!--termino do card Minhas vagas-->
 </div>
 
 
@@ -99,9 +99,9 @@
       </div>
     </div>
   </div>
- <!--termino do card vagas por categoria --> 
+ <!--termino do card vagas por categoria -->
   </div>
- 
+
 
 
 

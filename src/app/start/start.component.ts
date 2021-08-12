@@ -29,13 +29,13 @@ export class StartComponent implements OnInit {
 
 
   constructor(
-    
+
     private router: Router,
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
-    private authService: AuthService,
+    public authService: AuthService,
     private alertas: AlertasService
-  
+
   ) { }
 
   ngOnInit() {

@@ -23,7 +23,7 @@ export class AuthService {
     return this.http.post<Usuario>('https://queryjobs.herokuapp.com/usuarios/cadastrar', usuario)
 
   }
-  
+
 
   getByIdUsuario(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://queryjobs.herokuapp.com/usuarios/${id}`)
@@ -41,6 +41,16 @@ export class AuthService {
 
     return ok
   }
+
+  empregador(){
+    let ok: boolean = false
+
+    if(environment.tipo == 'empregador'){
+      ok = true
+    }
+    return ok
+  }
+
 
   atualizar(usuario: Usuario):Observable<Usuario>{
     return this.http.put<Usuario>('https://queryjobs.herokuapp.com/usuarios/alterar', usuario)
