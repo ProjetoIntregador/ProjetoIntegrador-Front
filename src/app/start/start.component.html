@@ -46,118 +46,126 @@
 
     <div class="tab-pane fade show active" id="nav-todasAsVagas" role="tabpanel" aria-labelledby="nav-todasAsVagas-tab">
 
+      <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+          <input [(ngModel)]='tituloProduto' (keyup)='findByTituloProduto()' type="text" class="form-control" id="tituloProduto" name="tituloProduto" 
+          placeholder="Digite um tipo de trabalho para pesquisar" > 
+        </div>
+      </div>
       <!--Card todas as vagas-->
-      <div class="card-columns">
-        <div class="card" *ngFor='let item of listaProduto | orderBy : key : true'>
-          <div class="card-body">
-            <h5 class="card-title">Categoria: {{item.categoria.descricao}}</h5>
-            <p class="card-text">Experiencia: {{item.experiencia}}</p>
-            <p class="card-text">Valor: R$ {{item.valor}}</p>
-            <p class="card-text"><small class="text-muted"> by: {{item.usuario.nomeusuario}}</small></p>
-            <!-- precisamos colocar uma variavel de data no produto do back end e linkar aqui -->
+      <div class=" card-columns">
+          <div class="card" *ngFor='let item of listaProduto '>
+            <div class="card-body">
+              <h5 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h5>
+              <p class="card-text">Vaga: {{item.tema}}</p>
+              <p class="card-text">Experiencia: {{item.experiencia}}</p>
+              <p class="card-text">Especificação: {{item.especificacao}}</p>
+              <p class="card-text">Valor: R$ {{item.valor}}</p>
+              <p class="card-text"><small class="text-muted"> by: {{item.usuario.nomeusuario}}</small></p>
+              <!-- precisamos colocar uma variavel de data no produto do back end e linkar aqui -->
+            </div>
+          </div>
+        </div>
+        <!--termino do card todas vagas-->
+
+
+      </div>
+
+      <div class="tab-pane fade" id="nav-MinhasVagas" role="tabpanel" aria-labelledby="#nav-MinhasVagas-tab">
+
+        <!--Inicio Card Minhas vagas-->
+        <div class="card-columns">
+          <div class="card" *ngFor='let item of usuario.produto'>
+            <img src="{{item.imagem}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h5>
+              <p class="card-text"> Experiencia: {{item.experiencia}}</p>
+              <p class="card-text"> Valor: R$ {{item.valor}}</p>
+              <p class="card-text"><small class="text-muted"></small></p>
+              <button [routerLink]="['/produto-edit', item.id]" type="button"
+                class="btn btn-outline-success mr-3">Editar</button>
+              <button [routerLink]="['/produto-delete', item.id]" type="button"
+                class="btn btn-outline-danger">Apagar</button>
+            </div>
+          </div>
+        </div>
+        <!--termino do card Minhas vagas-->
+      </div>
+
+
+
+      <div class="tab-pane fade" id="nav-VagaPorCategoria" role="tabpanel" aria-labelledby="#nav-VagaPorCategoria-tab">
+
+        <!--Inicio Card   vagas  por categoria -->
+        <div class="card-columns" *ngFor='let categoria of listaCategoria'>
+          <div class="card" *ngFor='let item of categoria.produto'>
+            <img src="{{item.imagem}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Experiencia: {{item.experiencia}}</p>
+              <p class="card-text"> Valor: R$ {{item.valor}}</p>
+              <p class="card-text"><small class="text-muted"> by: {{item.usuario.nomeusuario}}</small></p>
+              <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+          </div>
+        </div>
+        <!--termino do card vagas por categoria -->
+      </div>
+
+
+
+
+
+
+
+      <!-- Inicio da Modal -->
+      <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="titulo">Vaga</label>
+                <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
+                  placeholder="Digite o nome da vaga">
+              </div>
+              <div class="form-group">
+                <label for="titulo">Especificação</label>
+                <input [(ngModel)]='produto.especificacao' type="text" class="form-control" name="especificacao"
+                  id="especificacao" placeholder="Digite a especificação">
+              </div>
+              <div class="form-group">
+                <label for="titulo">Valor</label>
+                <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
+                  placeholder="Digite o valor">
+              </div>
+
+              <div class="form-group">
+                <label for="texto">Experiência</label>
+                <textarea [(ngModel)]='produto.experiencia' class="form-control" name="texto" id="texto"
+                  rows="3"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
+                    uma Nova</a></label>
+
+                <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
+                  (change)='findByIdCategoria'>
+                  <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
+            </div>
           </div>
         </div>
       </div>
-      <!--termino do card todas vagas-->
-
-
-    </div>
-
-    <div class="tab-pane fade" id="nav-MinhasVagas" role="tabpanel" aria-labelledby="#nav-MinhasVagas-tab">
-
-      <!--Inicio Card Minhas vagas-->
-      <div class="card-columns">
-        <div class="card" *ngFor='let item of usuario.produto | orderBy : key : reverse'>
-          <img src="{{item.imagem}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Categoria: {{item.categoria.descricao}}</h5>
-            <p class="card-text"> Experiencia: {{item.experiencia}}</p>
-            <p class="card-text"> Valor: R$ {{item.valor}}</p>
-            <p class="card-text"><small class="text-muted"></small></p>
-            <button [routerLink]="['/produto-edit', item.id]" type="button"
-              class="btn btn-outline-success mr-3">Editar</button>
-            <button [routerLink]="['/produto-delete', item.id]" type="button"
-              class="btn btn-outline-danger">Apagar</button>
-          </div>
-        </div>
-      </div>
-      <!--termino do card Minhas vagas-->
-    </div>
-
-
-
-    <div class="tab-pane fade" id="nav-VagaPorCategoria" role="tabpanel" aria-labelledby="#nav-VagaPorCategoria-tab">
-
-      <!--Inicio Card   vagas  por categoria -->
-      <div class="card-columns" *ngFor='let categoria of listaCategoria'>
-        <div class="card" *ngFor='let item of categoria.produto | orderBy : key : reverse'>
-          <img src="{{item.imagem}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Experiencia: {{item.experiencia}}</p>
-            <p class="card-text"> Valor: R$ {{item.valor}}</p>
-            <p class="card-text"><small class="text-muted"> by: {{item.usuario.nomeusuario}}</small></p>
-            <p class="card-text"><small class="text-muted"></small></p>
-          </div>
-        </div>
-      </div>
-      <!--termino do card vagas por categoria -->
-    </div>
-
-
-
-
-
-
-
-    <!-- Inicio da Modal -->
-    <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="titulo">Vaga</label>
-              <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
-                placeholder="Digite o nome da vaga">
-            </div>
-            <div class="form-group">
-              <label for="titulo">Especificação</label>
-              <input [(ngModel)]='produto.especificacao' type="text" class="form-control" name="especificacao"
-                id="especificacao" placeholder="Digite a especificação">
-            </div>
-            <div class="form-group">
-              <label for="titulo">Valor</label>
-              <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
-                placeholder="Digite o valor">
-            </div>
-
-            <div class="form-group">
-              <label for="texto">Experiência</label>
-              <textarea [(ngModel)]='produto.experiencia' class="form-control" name="texto" id="texto"
-                rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
-                  uma Nova</a></label>
-
-              <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
-                (change)='findByIdCategoria'>
-                <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.descricao}}</option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Fim da Modal-->
+      <!--Fim da Modal-->

@@ -17,8 +17,9 @@ import { AlertasService } from '../service/alertas.service';
 })
 export class StartComponent implements OnInit {
 
-  listaProduto:Produto[]
   produto: Produto = new Produto()
+  listaProduto:Produto[]
+  tituloProduto: string
 
   categoria: Categoria = new Categoria
   listaCategoria: Categoria[]
@@ -97,5 +98,17 @@ export class StartComponent implements OnInit {
     })
   }
 
+  findByTituloProduto(){
+    if(this.tituloProduto == ''){
+      this.getAllProduto()
+    } else {
+
+      this.produtoService.getByTituloProduto(this.tituloProduto).subscribe((resp : Produto[])=> {
+        this.listaProduto = resp
+      })
+    }
+
+    
+  }
 
 }

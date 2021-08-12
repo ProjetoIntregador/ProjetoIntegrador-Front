@@ -23,6 +23,11 @@ export class CategoriaService {
 
   }
 
+  getByTipoTrabalhoCategoria (tipotrabalho: string): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(`https://queryjobs.herokuapp.com/categoria/tipotrabalho/${tipotrabalho}`)
+  }
+  
+
   postCategoria(categoria: Categoria): Observable<Categoria>{
     return this.http.post<Categoria>('https://queryjobs.herokuapp.com/categoria', categoria)
   }
