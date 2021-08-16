@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Cores de texto */
+.rosamagenta{
+    color: #F91A6A;
+}
+.offrosa{
+    color: #FFE9F1;
+}
+.rosaclaro {
+    color: #FF9DF5;
+}
+.rosaescuro {
+    color:#FF74E3;
+}
+.roxoclaro {
+    color: #820A97;
+}
+.roxoescuro {
+    color: #700A94;
+}
+.azulescuro {
+    color: #3E0685;
+}
+.salmao {
+    color: #FF7B7B;
+}
+.amareloclaro {
+    color: #FDEF74;
+}
+.verdeclaro {
+    color: #C9FFC5;
+}
+.verdeescuro{
+    color: #88FF7D;
+}
+.cinzaclaro{
+    color: #D6D8E5;
+}
+
+/* Cores de fundo */
+.bgrosamagenta{
+    background-color: #F91A6A;
+}
+.bgoffrosa{
+    background-color: #FFE9F1;
+}
+.bgrosaclaro {
+    background-color: #FF9DF5;
+}
+.bgrosaescuro {
+    background-color:#FF74E3;
+}
+.bgroxoclaro {
+    background-color: #820A97;
+}
+.bgroxoescuro {
+    background-color: #700A94;
+}
+.bgazulescuro {
+    background-color: #3E0685;
+}
+.bgsalmao {
+    background-color: #FF7B7B;
+}
+.bgamareloclaro {
+    background-color: #FDEF74;
+}
+.bgverdeclaro {
+    background-color: #C9FFC5;
+}
+.bgverdeescuro{
+    background-color: #88FF7D;
+}
+.bgcinzaclaro{
+    background-color: #D6D8E5;
+}
