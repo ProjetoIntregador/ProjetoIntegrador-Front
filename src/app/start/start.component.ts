@@ -26,10 +26,14 @@ export class StartComponent implements OnInit {
 
   usuario: Usuario = new Usuario
   idUsuario = environment.id
-
+  prod2: Produto = new Produto()
   foto = environment.foto
+  nome = environment.nomeusuario
+
+ 
 
   idPost: number
+  idProduto:number
 
   constructor(
     private route: ActivatedRoute,
@@ -49,7 +53,7 @@ export class StartComponent implements OnInit {
     // }
       this.getAllProduto()
       this.getAllCategoria()
-      this.idPost = this.route.snapshot.params['id']
+             // this.idPost = this.route.snapshot.params['id']
     }
 
 
@@ -66,6 +70,11 @@ export class StartComponent implements OnInit {
       this.categoria = resp
       })
     }
+    findByIdProduto(){
+      this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto)=>{
+        this.prod2 = resp
+        })
+      }
 
   getAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produto[])=>{
@@ -94,12 +103,13 @@ export class StartComponent implements OnInit {
     })
   }
 
-//   apagar(){
-//     this.produtoService.deleteProduto(this.idPost).subscribe(()=>{
-//       alert('A postagem selecionado já era....')
-//       this.router.navigate(['/start'])
-//     })
+  apagar(){
 
-// }
+    this.produtoService.deleteProduto(this.idPost).subscribe(()=>{
+      alert('A postagem selecionado já era....')
+      this.router.navigate(['/start'])
+    })
+
+}
 
 }
