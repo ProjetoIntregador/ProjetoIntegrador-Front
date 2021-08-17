@@ -1,159 +1,191 @@
-<div class="container-fluid">
-  <div class="row bg-warning d-flex align-items-center">
-    <div class="col-md-6">
+<div class="container mt-4 mb-5">
+  <div class="d-flex justify-content-center row">
+    <div class="col-md-8">
+      <div class="feed p-2">
+        <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white border">
 
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-6">
-          <h1 class="fs-52">Seja Bem Vindo(a)!</h1>
-          <h5 class="fs-24">Expresse aqui seus pensamentos!</h5>
-        </div>
-      </div>
+          <div class="row d-flex justify-content-center mt-3 mb-5">
+            <div class="col-md-6">
 
+              <button class="btn btn-light text-warning mr-2 font-weight-bold" data-toggle="modal"
+                data-target="#novaPostagem">Nova Postagem</button>
 
-
-      <div class="row d-flex justify-content-center mt-3 mb-5">
-        <div class="col-md-6">
-          <button class="btn btn-light text-warning mr-2 font-weight-bold" data-toggle="modal"
-            data-target="#novaPostagem">Nova Postagem</button>
-          <a *ngIf='authService.empregador()' class=" btn btn-outline-light text-light font-weight-bold" href="#postagens">Ver Postagens</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 d-flex justify-content-center">
-      <img src="https://i.imgur.com/XMTzBUO.png" alt="" width="440px" height="440px">
-    </div>
-  </div>
-</div>
-
-<div class="container mb-5 mt-5" id="postagens">
-  <nav>
-    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-
-      <a class="nav-link active text-warning font-weight-bold" id="nav-home-tab" data-toggle="tab"
-      href="#nav-todasAsVagas"
-       role="tab" aria-controls="nav-TodasVagas" aria-selected="true">Todas Vagas</a>
-
-      <a (click)='findByIdUsuario()' class="nav-link text-dark font-weight-bold"
-      id="nav-MinhasVagas-tab" data-toggle="tab" href="#nav-MinhasVagas"
-      role="tab" aria-controls="nav-MinhasVagas" aria-selected="false">Minhas vagas</a>
-
-      <a  class="nav-link text-dark font-weight-bold" id="nav-VagaPorCategoria-tab"
-      data-toggle="tab" href="#nav-VagaPorCategoria" role="tab" aria-controls="nav-VagaPorCategoria"
-      aria-selected="true">Vagas por categoria</a>
-
-    </div>
-  </nav>
-
-  <div class="tab-content" id="nav-tabContent">
-
-    <div class="tab-pane fade show active" id="nav-todasAsVagas" role="tabpanel" aria-labelledby="nav-todasAsVagas-tab">
-
-   <!--Card todas as vagas-->
-   <div  class="card-columns">
-    <div class="card" *ngFor='let item of listaProduto'>
-      <div class="card-body">
-        <h5 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h5>
-        <p class="card-text">Experiencia: {{item.experiencia}}</p>
-        <p class="card-text">Valor: R$ {{item.valor}}</p>
-        <p class="card-text"><small class="text-muted"> by: {{item.usuario.nomeusuario}}</small></p>
-        <!-- precisamos colocar uma variavel de data no produto do back end e linkar aqui -->
-      </div>
-    </div>
-  </div>
-<!--termino do card todas vagas-->
-
-
-
-</div>
-
-    <div class="tab-pane fade" id="nav-MinhasVagas" role="tabpanel" aria-labelledby="#nav-MinhasVagas-tab">
-
-      <!--Inicio Card Minhas  vagas-->
-      <div  class="card-columns">
-        <div class="card" *ngFor='let item of usuario.produto'>
-          <img src="{{item.imagem}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h5>
-            <p class="card-text"> Experiencia: {{item.experiencia}}</p>
-            <p class="card-text"> Valor: R$ {{item.valor}}</p>
-            <p class="card-text"><small class="text-muted"></small></p>
-            <button [routerLink]="['/produto-edit', item.id]" type="button" class="btn btn-outline-success mr-3">Editar</button>
-            <button [routerLink]="['/produto-delete', item.id]" type="button" class="btn btn-outline-danger">Apagar</button>
+            </div>
           </div>
+          <!-- Inicio da Modal -->
+          <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog"
+            aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="titulo">Vaga</label>
+                    <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
+                      placeholder="Digite o nome da vaga">
+                  </div>
+                  <div class="form-group">
+                    <label for="titulo">Especificação</label>
+                    <input [(ngModel)]='produto.especificacao' type="text" class="form-control" name="especificacao"
+                      id="especificacao" placeholder="Digite a especificação">
+                  </div>
+                  <div class="form-group">
+                    <label for="titulo">Valor</label>
+                    <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
+                      placeholder="Digite o valor">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="texto">Experiência</label>
+                    <textarea [(ngModel)]='produto.experiencia' class="form-control" name="texto" id="texto"
+                      rows="3"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria'
+                        data-dismiss="modal">Cadastre
+                        uma Nova</a></label>
+
+                    <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
+                      (change)='findByIdCategoria'>
+                      <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-warning" (click)='publicar()'
+                    data-dismiss="modal">Publicar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fim da Modal-->
+
+
+
+          <div class="feed-icon px-2"><i class="fa fa-long-arrow-up text-black-50"></i></div>
         </div>
-      </div>
- <!--termino do card Minhas vagas-->
-</div>
+        <!-- <div class="bg-white border mt-2">
+          <div *ngFor='let item of listaProduto'>
+            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+
+              <div>
+                <p class="card-text ">
+                  <img class="rounded-circle" src="{{foto}}" width="45">
+                  <small class="text-muted"><a routerLink="perfil">{{item.usuario.nomeusuario}}</a></small>
+                </p>
+              </div>
+              <div class="d-flex flex-row align-items-center feed-text px-2">
+
+                <div class="d-flex justify-content-center flex-column flex-wrapd-flex flex-row align-items-center ml-2">
+                  <h6 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h6>
+                  <p class="card-text">Experiencia: {{item.experiencia}}</p>
+                  <p class="card-text">Valor: R$ {{item.valor}}</p>
+                </div>
+              </div>
+              <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+              <div></div>
+            </div>
+            <div class=" px-3 p-2 border-bottom "><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</span>
+              <div class="d-flex justify-content-center socials p-2 py-3  "><i class="fa fa-thumbs-up"></i><i
+                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div></div>
+          </div>
+          </div> -->
 
 
-
-<div class="tab-pane fade" id="nav-VagaPorCategoria" role="tabpanel" aria-labelledby="#nav-VagaPorCategoria-tab">
-
-  <!--Inicio Card   vagas  por categoria -->
-  <div  class="card-columns" *ngFor='let categoria of listaCategoria'>
-    <div class="card" *ngFor='let item of categoria.produto'>
-      <img src="{{item.imagem}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Experiencia: {{item.experiencia}}</p>
-        <p class="card-text">  Valor: R$ {{item.valor}}</p>
-        <p class="card-text"><small class="text-muted"> by: {{item.usuario.nomeusuario}}</small></p>
-        <p class="card-text"><small class="text-muted"></small></p>
+        <div class="bg-white border mt-2" *ngFor='let item of listaProduto'>
+          <div>
+            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+              <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="{{foto}}"
+                  width="45">
+                <div class="d-flex flex-column flex-wrap ml-2"><span
+                    class="font-weight-bold">{{item.usuario.nomeusuario}}</span><span class="text-black-50 time">colocar
+                    data no back end para as postagens </span></div>
+              </div>
+              <!-- <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50">
+                <select class="fa fa-ellipsis-v text-black-50" name="categoria" id="categoria" >
+                <option></option></select></i></div> -->
+              <div class="feed-icon px-2 social-action dropdown">
+                <button data-toggle="dropdown" class="btn-white btn btn-primary btn-lg ">
+                  <i class="fa fa-ellipsis-v text-black-50"></i>
+                </button>
+                <ul class="dropdown-menu m-t-xs">
+                  <li><a href="#">Editar</a></li>
+                  <li><a data-toggle="modal" data-target="#apagarPostagem">Apagar</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="feed-image p-2 px-3"><img class="img-fluid img-responsive" height="30%" src="{{item.imagem}}">
+          </div>
+          <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+              class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+        </div>
       </div>
     </div>
   </div>
- <!--termino do card vagas por categoria -->
-  </div>
-
-
-
-
-
+</div>
 
 
 <!-- Inicio da Modal -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<div class="modal fade" id="apagarPostagem" tabindex="-1" role="dialog"
+aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="titulo">Vaga</label>
+        <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
+          placeholder="Digite o nome da vaga">
       </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label for="titulo">Vaga</label>
-          <input [(ngModel)]='produto.tema'  type="text" class="form-control" name="tema" id="tema" placeholder="Digite o nome da vaga">
-        </div>
-        <div class="form-group">
-          <label for="titulo">Especificação</label>
-          <input [(ngModel)]='produto.especificacao'  type="text" class="form-control" name="especificacao" id="especificacao" placeholder="Digite a especificação">
-        </div>
-        <div class="form-group">
-          <label for="titulo">Valor</label>
-          <input [(ngModel)]='produto.valor'  type="number" class="form-control" name="valor" id="valor" placeholder="Digite o valor">
-        </div>
-
-        <div class="form-group">
-          <label for="texto">Experiência</label>
-          <textarea [(ngModel)]='produto.experiencia' class="form-control" name="texto" id="texto" rows="3"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre uma Nova</a></label>
-
-          <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria' (change)='findByIdCategoria'>
-            <option *ngFor= 'let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="titulo">Especificação</label>
+        <input [(ngModel)]='produto.especificacao' type="text" class="form-control" name="especificacao"
+          id="especificacao" placeholder="Digite a especificação">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      <div class="form-group">
+        <label for="titulo">Valor</label>
+        <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
+          placeholder="Digite o valor">
+      </div>
+
+      <div class="form-group">
+        <label for="texto">Experiência</label>
+        <textarea [(ngModel)]='produto.experiencia' class="form-control" name="texto" id="texto"
+          rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria'
+            data-dismiss="modal">Cadastre
+            uma Nova</a></label>
+
+        <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
+          (change)='findByIdCategoria'>
+          <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
+        </select>
       </div>
     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      <button type="button" class="btn btn-warning" (click)='publicar()'
+        data-dismiss="modal">Publicar</button>
+    </div>
   </div>
+</div>
 </div>
 <!--Fim da Modal-->

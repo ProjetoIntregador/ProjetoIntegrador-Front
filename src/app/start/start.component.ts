@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
@@ -24,12 +24,15 @@ export class StartComponent implements OnInit {
   listaCategoria: Categoria[]
   idCategoria: number
 
-  usuario: Usuario= new Usuario
+  usuario: Usuario = new Usuario
   idUsuario = environment.id
 
+  foto = environment.foto
+
+  idPost: number
 
   constructor(
-
+    private route: ActivatedRoute,
     private router: Router,
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
@@ -40,12 +43,13 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-    if (environment.token == ''){
-      this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente!')
-      this.router.navigate(['/entrar'])
-    }
+    // if (environment.token == ''){
+    //   this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente!')
+    //   this.router.navigate(['/entrar'])
+    // }
       this.getAllProduto()
       this.getAllCategoria()
+      this.idPost = this.route.snapshot.params['id']
     }
 
 
@@ -63,7 +67,6 @@ export class StartComponent implements OnInit {
       })
     }
 
-
   getAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produto[])=>{
       this.listaProduto = resp
@@ -75,10 +78,6 @@ export class StartComponent implements OnInit {
       this.usuario = resp
     })
   }
-
-
-
-
 
   publicar(){
     this.categoria.id = this.idCategoria
@@ -95,5 +94,12 @@ export class StartComponent implements OnInit {
     })
   }
 
+//   apagar(){
+//     this.produtoService.deleteProduto(this.idPost).subscribe(()=>{
+//       alert('A postagem selecionado já era....')
+//       this.router.navigate(['/start'])
+//     })
+
+// }
 
 }
