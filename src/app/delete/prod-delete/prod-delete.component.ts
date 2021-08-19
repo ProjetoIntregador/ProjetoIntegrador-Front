@@ -31,7 +31,7 @@ export class ProdDeleteComponent implements OnInit {
 }
 
 findByIdPostagem(id: number){
-  this.produtoService.getProdutoById(id).subscribe((resp: Produto)=>{
+  this.produtoService.getByIdProduto(id).subscribe((resp: Produto)=>{
     this.produto = resp
   })
 }

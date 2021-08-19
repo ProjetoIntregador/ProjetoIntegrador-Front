@@ -74,6 +74,7 @@ span{
 }
 
 /* Cores de fundo */
+
 .bgrosamagenta{
     background-color: #F91A6A;
 }
@@ -110,3 +111,17 @@ span{
 .bgcinzaclaro{
     background-color: #D6D8E5;
 }
+.bgbrancofeed{
+  background-color: #F6F5F5;
+}
+
+/* fontes */
+.fsRubik{
+  font-family:Rubik;
+}
+.fs25{
+font-family: Rubik;
+font-size: 26px;
+color: #000000;
+}
+

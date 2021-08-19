@@ -42,6 +42,8 @@ export class AuthService {
     return ok
   }
 
+
+
   empregador(){
     let ok: boolean = false
 
