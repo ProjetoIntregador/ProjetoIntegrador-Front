@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+/* Fontes */
+html{
+    font-family: 'Rubik', sans-serif, Verdana, sans-serif; 
+}
+p{
+    font-family: 'Roboto', sans-serif, Verdana, sans-serif; 
+}
+span{
+    font-family: 'Roboto', sans-serif, Verdana, sans-serif; 
+}
 
 /* Cores de texto */
 .rosamagenta{
