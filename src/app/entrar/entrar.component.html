@@ -1,15 +1,63 @@
-<div class="container bg-info d-flex flex-column justify-content-center w-25 align-items-center  vh-100">
-    <h1>Entrar</h1>
+<div class="background wavetop">
+  <!-- Onda de cima -->
+  <!-- <svg class="wavetop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#FF9DF5" fill-opacity="1"
+      d="M0,160L48,133.3C96,107,192,53,288,58.7C384,64,480,128,576,181.3C672,235,768,277,864,277.3C960,277,1056,235,1152,192C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+    </path>
+  </svg> -->
+  <div class="wavetop"></div>
 
-    <form action="" class="d-flex flex-column">
-      <label for="email">Email</label>
-      <input [(ngModel)]='usuarioLogin.email' type="text" name="email" id="email" placeholder="Digite seu e-mail">
+  <div class="d-flex justify-content-around">
+  <div class="row d-flex align-items-center">
+    <div class="col-md-4">
+      <div class="row d-flex justify-content-center textinho boxhome">
+        <h1>Entrar</h1>
 
-      <label for="senha">Senha</label>
-      <input [(ngModel)]='usuarioLogin.senha' type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        <form action="" class="d-flex flex-column">
+          <label class="invisible" for="email">Email</label>
+          <input [(ngModel)]='usuarioLogin.email' class="form-control input" type="text" name="email" id="email" placeholder="Digite seu e-mail">
 
-      <button type="submit" (click)='entrar()'>Entrar</button>
+          <label class="invisible" for="senha">Senha</label>
+          <input [(ngModel)]='usuarioLogin.senha'class="form-control input mb-5" type="password" name="senha" id="senha" placeholder="Digite sua senha">
 
-      <p>Caso não tenha cadastro<a routerLink='/cadastrar'>Cadastre-se</a></p>
-    </form>
-  </div>
+          <button type="submit" (click)='entrar()' >Entrar</button>
+
+          <p>Caso não tenha cadastro<a routerLink='/cadastrar'>Cadastre-se</a></p>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Imagem -->
+    <div class="col-md-8 bolha">
+
+        <!-- <img class="imgsize" src="../../assets/imgs/logo/bolha.svg" -->
+          <!-- alt="Programador negro, vestido de rosa com cabelo cacheado de frente ao computador codando"> -->
+        <img class="imgsize" src="../../assets/imgs/logo/menina tela login.svg" alt="">
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <!-- Onda de baixo
+    <svg class="wavebottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#FF9DF5" fill-opacity="1"
+        d="M0,96L48,112C96,128,192,160,288,192C384,224,480,256,576,234.7C672,213,768,139,864,90.7C960,43,1056,21,1152,53.3C1248,85,1344,171,1392,213.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+
+
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script> -->
+  <!-- </div>
+   <footer class="bg-secondary">
+    <p class="text-center">
+      Todos os direitos reservados: Turma 25
+      <a href="https://github.com" class="text-dark">
+        <i class="fa fa-github-alt" aria-hidden="true"></i>
+      </a>
+    </p>
+  </footer> -->
+
