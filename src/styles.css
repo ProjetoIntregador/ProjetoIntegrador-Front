@@ -74,6 +74,7 @@ span{
 }
 
 /* Cores de fundo */
+
 .bgrosamagenta{
     background-color: #F91A6A;
 }
@@ -81,10 +82,10 @@ span{
     background-color: #FFE9F1;
 }
 .bgrosaclaro {
-    background-color: #FF9DF5;
+    background-color: #FF9DF5 !important;
 }
 .bgrosaescuro {
-    background-color:#FF74E3;
+    background-color:#FF74E3 !important;
 }
 .bgroxoclaro {
     background-color: #820A97;
@@ -96,7 +97,7 @@ span{
     background-color: #3E0685;
 }
 .bgsalmao {
-    background-color: #FF7B7B;
+    background-color: #FF7B7B !important;
 }
 .bgamareloclaro {
     background-color: #FDEF74;
@@ -105,8 +106,22 @@ span{
     background-color: #C9FFC5;
 }
 .bgverdeescuro{
-    background-color: #88FF7D;
+    background-color: #88FF7D !important;
 }
 .bgcinzaclaro{
     background-color: #D6D8E5;
 }
+.bgbrancofeed{
+  background-color: #F6F5F5;
+}
+
+/* fontes */
+.fsRubik{
+  font-family:Rubik;
+}
+.fs25{
+font-family: Rubik;
+font-size: 26px;
+color: #000000;
+}
+

@@ -1,10 +1,19 @@
-body {
-    background-color: #eee
+body{
+    font-family: 'Rubik', sans-serif;
 }
+
+
+
+
+.background{
+    min-height: 100vh;
+    background-color: #FDEF74;
+}
+
 
 .card {
     border: none;
-    border-radius: 10px
+    border-radius: 50px
 }
 
 .c-details span {
@@ -13,14 +22,15 @@ body {
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    min-width: 150px;
+    height: 150px;
     background-color: #eee;
-    border-radius: 15px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 39px
+    font-size: 39px;
+
 }
 
 .badge span {
@@ -44,12 +54,17 @@ body {
     background-color: red
 }
 
-.text1 {
-    font-size: 14px;
-    font-weight: 600
+
+
+img{
+    width: 530px;
+    height: auto;
+    margin-bottom: 25px;
 }
 
-.text2 {
-    color: #a5aec0
-}
+
+
+
+
+
 
