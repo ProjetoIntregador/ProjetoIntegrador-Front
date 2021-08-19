@@ -10,7 +10,7 @@
   <div class="d-flex justify-content-around">
   <div class="row d-flex align-items-center">
     <div class="col-md-4">
-      <div class="row d-flex justify-content-center textinho boxhome">
+      <div class="row d-flex justify-content-center  boxhome">
         <h1>Entrar</h1>
 
         <form action="" class="d-flex flex-column">
@@ -20,9 +20,10 @@
           <label class="invisible" for="senha">Senha</label>
           <input [(ngModel)]='usuarioLogin.senha'class="form-control input mb-5" type="password" name="senha" id="senha" placeholder="Digite sua senha">
 
-          <button type="submit" (click)='entrar()' >Entrar</button>
+          <button class="btnsucess" type="submit" (click)='entrar()' >Entrar</button>
 
-          <p>Caso não tenha cadastro<a routerLink='/cadastrar'>Cadastre-se</a></p>
+          <p>Ainda não tem conta?<a class="rosamagenta textinho" routerLink='/cadastrar'> Cadastre-se</a></p>
+          <a class="roxoclaro textinho btn" href="#/entrar" routerLink='/home'>Voltar para home</a>
         </form>
 
       </div>

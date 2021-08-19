@@ -39,10 +39,7 @@ select:focus, .form-group-sm:focus {
   width: 100vw;
 }
 
-.fa-briefcase{
-    width: 30px;
-    height: 30px;
-}
+
 .wavebottom {
   background-size: contain;
   background-repeat: no-repeat;
@@ -84,4 +81,15 @@ select:focus, .form-group-sm:focus {
   background-color: #FFFFFF;
   border-radius: 50px;
   z-index: 1000;
+}
+.textinho {
+  font-size: 0.9em;
+}
+.btnsucess {
+
+  background-color: #700A94;
+  padding: 6px;
+  margin: 2%;
+  border-radius: 25px;
+  color:#fff;
 }

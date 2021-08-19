@@ -103,6 +103,7 @@ select:focus, .form-group-sm:focus {
 
 .boxhome {
   position: absolute;
+  margin: 0;
   width: 430px;
   height: 750px;
   left: 4%;
@@ -110,12 +111,12 @@ select:focus, .form-group-sm:focus {
   background-color: #FFFFFF;
   border-radius: 50px;
   z-index: 1000;
-  max-height: 100vh;
+  max-height: 98vh;
   
 }
 
 .textinho {
-  font-size: 0.72em;
+  font-size: 0.70em;
 }
 
 
