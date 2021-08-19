@@ -20,6 +20,7 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { TesteComponent } from './teste/teste.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ProdutoEditComponent,
     ProdutoDeleteComponent,
     UsuarioEditComponent,
-    AlertasComponent
+    AlertasComponent,
+    TesteComponent
   ],
   imports: [
     BrowserModule,
