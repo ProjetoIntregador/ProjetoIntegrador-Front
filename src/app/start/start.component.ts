@@ -30,7 +30,7 @@ export class StartComponent implements OnInit {
   foto = environment.foto
   nome = environment.nomeusuario
 
- 
+
 
   idPost: number
   idProduto:number
@@ -70,11 +70,11 @@ export class StartComponent implements OnInit {
       this.categoria = resp
       })
     }
-    findByIdProduto(){
-      this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto)=>{
-        this.prod2 = resp
-        })
-      }
+    // findByIdProduto(){
+    //   this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto)=>{
+    //     this.prod2 = resp
+    //     })
+    //   }
 
   getAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produto[])=>{
@@ -103,13 +103,11 @@ export class StartComponent implements OnInit {
     })
   }
 
-  apagar(){
+  // apagar(){
 
-    this.produtoService.deleteProduto(this.idPost).subscribe(()=>{
-      alert('A postagem selecionado já era....')
-      this.router.navigate(['/start'])
-    })
-
-}
+  //   this.produtoService.deleteProduto(this.idPost).subscribe(()=>{
+  //     alert('A postagem selecionado já era....')
+  //     this.router.navigate(['/start'])
+  //   })
 
 }
