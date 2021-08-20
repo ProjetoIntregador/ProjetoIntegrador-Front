@@ -1,343 +1,321 @@
 /* CSS Nav Bar */
-.q{
-    color: #ffff;
-    
+
+.rubik {
+  font-family: "Rubik", sans-serif, Verdana, sans-serif;
+}
+.fs12 {
+  font-size: 1.5rem;
+}
+.back {
+  width: 100%;
+  height: 100%;
+  /* left: -3px;
+top: 112px; */
+  background-color: #fdef74;
+  z-index: -4;
+}
+.backgroundRosa {
+  width: 100%;
+  height: 100%;
+  background-color: #ff74e3;
+  z-index: -4;
 }
 
-.back{
-width: 1500px;
-height: 935px;
-left: -3px;
-top: 112px;
-background-color:#FDEF74;  
-z-index: -3;
+.backgroundRoxo {
+  /* position: absolute;
+  width: 1503px;
+  height: 685px;
+  left: -4px;
+  top: 1619px; */
+  /* height:100vh; */
+
+  background-color: #700a94;
+  z-index: -2;
 }
 
-.pessoa{
-position: absolute;
-width: 191.76px;
-height: 456.67px;
-left: 173px;
-top: 311px;
-z-index: 3;
+.pessoa {
+  margin-top: 30px;
+  z-index: 3;
 }
 
-.card1{
-position: absolute;
-width: 420px;
-height: 515px;
-left: 345px;
-top: 171px;
-z-index: 2;
+.card1 {
+  width: 60%;
+
+  z-index: 2;
 }
 
-.card2{
-position: absolute;
-width: 533px;
-height: 303px;
+.card2 {
+  /* position: absolute;
+*/
+  width: 45%;
+  /*
 left: 776px;
-top: 507px;
-z-index: 2;
+top: 507px; */
+  z-index: 2;
 }
 
-.text1{
-    position: absolute;
+.text1 {
+  /* position: absolute;
     width: 469px;
     height: 268px;
     left: 879px;
-    top: 225px;
-    
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 57px;
-    text-align: justify;
-    color: #700A94; 
-    z-index: 2;   
+    top: 225px; */
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+  text-align: justify;
+  color: #700a94;
+  z-index: 2;
 }
 
-.vagas{
-position: absolute;
-width: 83px;
-height: 36px;
-left: 1042px;
-top: 37px;
+.vagas {
+  position: absolute;
+  width: 83px;
+  height: 36px;
+  left: 1042px;
+  top: 37px;
 
-font-family: Rubik;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 36px;
-color: #700A94;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #700a94;
 }
 
-.pessoas{
-    position: absolute;
-width: 115px;
-height: 36px;
-left: 1148px;
-top: 37px;
+.pessoas {
+  position: absolute;
+  width: 115px;
+  height: 36px;
+  left: 1148px;
+  top: 37px;
 
-font-family: Rubik;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 36px;
-color: #700A94;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #700a94;
 }
 
-.entrar{
-    position: absolute;
+.entrar {
+  /* position: absolute;
 width: 103px;
 height: 43px;
 left: 1289px;
-top: 30px;
+top: 30px; */
 
-font-family: Rubik;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 43px;
-color: #F91A6A;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+  color: #f91a6a !important;
+}
+.imgGene {
+  width: 70%;
+  text-align: center;
 }
 
-.menuhome{
-
-position: relative;
-width: 1500px;
-height: 110px;
-left: 0px;
-top: 0px;
-background: #FFFFFF;
-z-index: 2;
-}
-
-.circulo1{
-    position: absolute;
-    width: 399px;
+.circulo1 {
+  background-image: url(../../assets/imgs/imagensdahome/circulo1.png);
+  /* width: 399px;
     height: 391px;
     left: -69px;
     top: 231.44px;
-    transform: rotate(-7.55deg);
-    z-index: 1;
+    transform: rotate(-7.55deg); */
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
-.circulo2{
-position: absolute;
-width: 821px;
-height: 851px;
-left: 625px;
+.circulo2 {
+  position: relative;
+
+  /* left: 625px;
 top: 85px;
 background: #FF9DF5;
-border-radius: 1000px;
-z-index: 1;
+border-radius: 1000px; */
+  background-position: top right;
+  background-image: url(../../assets/imgs/imagensdahome/circulo2.png);
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
-.onda1{
-position: absolute;
-width: 1500px;
-height: 354px;
-left: 0px;
-top: 701px;
-}
+.onda1 {
+  position: relative;
 
-.foto1{
-position: absolute;
+  left: 0;
+  right: 0;
+}
+.onda2 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* .foto1{
+/* position: absolute;
 width: 476px;
 height: 437.52px;
 left: 814px;
-top: 977px;
-z-index: 3;
-}
+top: 977px; */
+/* z-index: 3;
+} */
 
-.text2{
-    position: absolute;
+.text2 {
+  /* position: absolute;
     width: 654px;
     height: 337px;
     left: 66px;
-    top: 1045px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 42px;
-    line-height: 50px;
-    text-align: justify;
-    color: #820A97;
-    z-index: 3;
+    top: 1045px; */
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: justify;
+  color: #820a97;
+  z-index: 3;
 }
 
-.foto3{
-    position: absolute;
+.foto3 {
+  /* position: absolute;
     width: 643px;
     height: 601.65px;
     left: 51px;
-    top: 1620px;
-    z-index: 3;
-
+    top: 1620px; */
+  z-index: 3;
 }
 
-.text3{
-    position: absolute;
+.text3 {
+  /* position: absolute;
     width: 599px;
     height: 462px;
     left: 768px;
-    top: 1758px;
-    
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 42px;
-    line-height: 50px;
-    text-align: justify;
-    color: #FFE9F1; 
-    z-index: 3;
+    top: 1758px; */
+
+  padding-top: 10%;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: justify;
+  color: #ffe9f1;
+  z-index: 3;
 }
 
-
-
-.text4{
-position: absolute;
-width: 300px;
+.text4 {
+  /* width: 300px;
 height: 57px;
 left: 570px;
-top: 3096px;
+top: 3096px; */
 
-font-family: Rubik;
-font-style: normal;
-font-weight: normal;
-font-size: 48px;
-line-height: 57px;
-color: #700A94;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+  color: #700a94;
 }
 
-.barra1{
-position: absolute;
-width: 1282.04px;
-height: 0px;
-left: 76.98px;
-top: 3005.35px;
-border: 1px solid #820A97;
-transform: rotate(0.06deg);
+.barra1 {
+  position: absolute;
+  width: 1282.04px;
+  height: 0px;
+  left: 76.98px;
+  top: 3005.35px;
+  border: 1px solid #820a97;
+  transform: rotate(0.06deg);
 }
 
-
-.back2{
-    position: absolute;
-    z-index: index 1;
-    width: 1443px;
-    height: 685px;
-    left: 0px;
-    top: 1621px;
-    background: #700A94;   
+.back2 {
+  position: absolute;
+  z-index: index 1;
+  width: 1443px;
+  height: 685px;
+  left: 0px;
+  top: 1621px;
+  background: #700a94;
 }
 
-.text{
-    position: absolute;
-    width: 210px;
-    height: 57px;
-    left: 612px;
-    top: 2537px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 57px;
-    color: #700A94; 
+.text {
+  position: absolute;
+  width: 210px;
+  height: 57px;
+  left: 612px;
+  top: 2537px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+  color: #700a94;
 }
 
-.parceiros{
-position: absolute;
-width: 1177px;
-height: 225px;
-left: 140px;
-top: 2654px;
+.parceiros {
+  position: absolute;
+  width: 1177px;
+  height: 225px;
+  left: 140px;
+  top: 2654px;
 }
 
-.back3{
-position: absolute;
-width: 1502px;
-height: 236px;
-left: -3px;
-top: 2291px;
+.onda3 {
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 
-.back4{
-    position: absolute;
-    width: 1500px;
-    height: 370px;
-    left: 0px;
-    top: 1261px; 
+.back4 {
+  position: absolute;
+  width: 1500px;
+  height: 370px;
+  left: 0px;
+  top: 1261px;
 }
 
-.back5{
-
-    position: absolute;
-    width: 1503px;
-    height: 644px;
-    left: -3px;
-    top: 988px;
-    background: #FF74E3;
-    z-index: -4;
+.fotoEquipe {
+  width: 70%;
 }
-
-.back7{
-    position: absolute;
-    width: 1503px;
-    height: 685px;
-    left: -4px;
-    top: 1619px;
-background: #700A94;
-z-index: -3;
-}
-
-
-.nossa {
-    position: absolute;
-    width: 1202px;
-    height: 288px;
-    left: 119px;
-    top: 3212px;
-    
-}
-
 /* Rodapé */
 
-.footer{
-    position: absolute;
+footer {
+  /* position: absolute;
     width: 1500px;
     height: 300px;
     left: 0px;
-    top: 3686px;
-    background: #38106B;
-    z-index: -3;
-    }
+    top: 3686px; */
+  background-color: #38106b;
+  z-index: -3;
+}
 
-    .tm{
-        width: 119px;
-        height: 99px;
-        align-items: center;
+.text5 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.23rem;
+  text-align: center;
+  color: #000000;
+}
+.ondaFooter{
+  position: relative;
+  bottom: 0;
+  background-image: url(../../assets/imgs/imagensdahome/logoComLetra);
+  background-repeat: no-repeat;
+  background-position: left ;
 
-        }
+}
+.opacidade{
+  opacity: 0.80;
+}
+/* .github {
+  height: 200%;
+}
 
-        .text5{
-            font-family: Rubik;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 24px;
-            text-align: center;
-            color: #000000;
-            margin-top: 80px;
-            
-        }
-
-        .github{
-            width: 150px;
-            height: 150px;
-            margin-left: 650px;
-        }
-        
-        .github:hover:not(.active)        {
-
-            background-color: #F91A6A;
-         }
+.github:hover:not(.active) {
+  background-color: #f91a6a;
+} */
