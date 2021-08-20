@@ -64,7 +64,11 @@ export class StartComponent implements OnInit {
       })
     }
 
-
+    // findByIdProduto(){
+    //   this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto)=>{
+    //     this.prod2 = resp
+    //   })
+    // }
     findByIdCategoria(){
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
       this.categoria = resp
