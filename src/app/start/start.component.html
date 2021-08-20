@@ -1,4 +1,10 @@
 <div class="bgcinzaclaro fsRubik">
+  <div class="row d-flex justify-content-center mt-5 mb-5">
+    <div class="col-md-4">
+      <input [(ngModel)]='temaProduto' (keyup)='findByTemaProduto()' type="text" class="form-control" id="temaProduto" name="temaProduto" 
+      placeholder="Digite um tipo de trabalho para pesquisar" > 
+    </div>
+  </div>
 
     <!-- fonfonfon -->
     <div class="d-flex justify-content-center ">
@@ -45,7 +51,8 @@
                 <img class="rounded-circle" src="{{item.usuario.foto}}" width="45">
                 <div class="d-flex flex-column flex-wrap ml-2">
                   <span class="font-weight-bold fs25">{{item.usuario.nomeusuario}}</span>
-                  <span class="text-black-50 time">"colocar data no back end para as postagens"</span>
+                 <!-- Ô Jão coloquei a data aqui dentro já ai depois de rodar o banco de novo já aparece -->
+                  <small class="text-black-50 time"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
                 </div>
               </div>
                 <div class="feed-icon px-2 social-action dropdown pull-right" *ngIf=' item.usuario.id == idUsuario '>

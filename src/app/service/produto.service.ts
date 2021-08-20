@@ -22,6 +22,11 @@ export class ProdutoService {
   getByIdProduto(id: number): Observable<Produto>{
     return this.http.get<Produto>(`https://queryjobs.herokuapp.com/produto/${id}`)
   }
+
+  getByTemaProduto(tema:string):Observable<Produto[]>{
+    return this.http.get<Produto[]>(`https://queryjobs.herokuapp.com/produto/tema/${tema}`)    
+  }
+
   
   deleteProduto(id: number){
     return this.http.delete(`https://queryjobs.herokuapp.com/produto/${id}`)

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -10,7 +9,9 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
+
   nomeusuario = environment.nomeusuario
+  idUsuario = environment.id
   foto = environment.foto
   id = environment.id
 
@@ -30,4 +31,6 @@ export class MenuComponent implements OnInit {
     environment.foto ='',
     environment.id =0
   }
+
+
 }

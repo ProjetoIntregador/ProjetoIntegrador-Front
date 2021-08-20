@@ -24,6 +24,9 @@ export class AuthService {
 
   }
 
+  getAllUsuarios(): Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(`https://queryjobs.herokuapp.com/usuarios/`)
+  }
 
   getByIdUsuario(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://queryjobs.herokuapp.com/usuarios/${id}`)
