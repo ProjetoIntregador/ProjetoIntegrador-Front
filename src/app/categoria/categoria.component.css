@@ -1,0 +1,17 @@
+.background {
+  height: 100vh;
+  background-color: #ffffff;
+  width: 100vw;
+}
+/* .card{
+  background-color: #FDEF74;
+  align-items: center;
+  position: center;
+  width: 50%;
+} */
+.table:hover td{
+  color: yellow!important;
+}
+.table:hover th{
+  color: white!important;
+}

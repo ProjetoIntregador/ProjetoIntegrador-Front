@@ -28,8 +28,8 @@ export class CategoriaComponent implements OnInit {
   // }
 
     if(environment.tipo != 'adm'){
-      this.alertas.showAlertInfo('Você precisa ser administrador para acessar essa rota')
-      this.router.navigate(['/start'])
+      // this.alertas.showAlertInfo('Você precisa ser administrador para acessar essa rota')
+      // this.router.navigate(['/start'])
     }
 
     this.findAllCategoria()
