@@ -6,7 +6,8 @@ body{
 
 
 .background{
-    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
     background-color: #FDEF74;
 }
 
@@ -32,8 +33,15 @@ body{
     font-size: 39px;
 
 }
-
-.badge span {
+.boxhome {
+  width: 120%;
+  height: 150%;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  z-index: 1000;
+}
+/* .badge span {
     background-color: #fffbec;
     width: 60px;
     height: 25px;
@@ -43,7 +51,7 @@ body{
     color: #fed85d;
     justify-content: center;
     align-items: center
-}
+} */
 
 .progress {
     height: 10px;
@@ -54,13 +62,11 @@ body{
     background-color: red
 }
 
+/* img{
+    width: 25%;
+    /* height: auto;
+    margin-bottom: 25px; */
 
-
-img{
-    width: 530px;
-    height: auto;
-    margin-bottom: 25px;
-}
 
 
 

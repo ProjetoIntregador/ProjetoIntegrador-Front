@@ -1,8 +1,9 @@
-<div class="background ">
-  <div class="align-center">
-    <div class="row d-flex justify-content-center">
+<div class="background align-items-center">
 
-      <!-- <div class="col-md-6">
+
+  <div class="row d-flex justify-content-center mr-0 ">
+
+    <!-- <div class="col-md-6">
         <div class="card p-5 m-3">
           <div class="d-flex justify-content-between">
             <div class="d-flex align-items-center justify-content-center">
@@ -44,55 +45,53 @@
       </div> -->
 
 
-      <div class="row">
-        <div class="d-flex justify-content-center">
 
-          <div class="col-md-6 ">
-            <div class="card p-5 m-3 ">
-              <div class="d-flex justify-content-end">
-                <div class="d-flex align-items-center justify-content-center">
-                  <div>
-                    <div class="icon"><i class="bx bxl-mailchimp"></i>
-                    </div>
-                    <p>{{produto.usuario.nomeusuario}}</p>
-                  </div>
+    <div class="row d-flex justify-content-center ">
 
-                  <div class=" oxoescuro ms-2 c-details ml-5">
-                    <strong>
-                      <h2 class=" mt-0 m-0 p-0 mb-2  w-100 ">{{produto.tema}}</h2>
-                      <p class=" mt-2 pl-4 btn bgverdeescuro  azulescuro mr-4 ">CLT</p>
-                      <p class=" mt-2 pl-4 btn bgverdeescuro  azulescuro ml-4 ">{{produto.valor}}</p>
-                    </strong>
+      <div class="col-md-12 card p-5 m-3 ">
 
+        <div class="d-flex justify-content-end">
+          <div class="d-flex align-items-center justify-content-center ">
+            <div class=" d-flex flex-column align-items-center">
+              <div ><img class="rounded-circle" src="{{produto.usuario.foto}}"
+                width="200">
+              </div>
+              <p>{{produto.usuario.nomeusuario}}</p>
+            </div>
 
-                    <div class="mt-5">
-                      <h5 class="heading">{{produto.experiencia}}</h5>
-                      <p>{{produto.especificacao}}</p>
+            <div class="  ms-2 c-details ml-5">
+              <strong>
+                <h2 class=" roxoescuro mt-0 m-0 p-0 mb-2  w-100 ">{{produto.tema}}</h2>
+                <p class=" mt-2 pl-4 btn bgverdeescuro  azulescuro mr-4 ">CLT</p>
+                <p class=" mt-2 pl-4 btn bgverdeescuro  azulescuro ml-4 ">{{produto.valor}}</p>
+              </strong>
 
 
-                      <div class="d-flex justify-content-between">
+              <div class="mt-5">
+                <h5 class="heading">{{produto.experiencia}}</h5>
+                <p>{{produto.especificacao}}</p>
 
-                        <a href="" class=" ml-2 btn bgverdeescuro ">TAG</a>
-                        <a href="" class=" ml-2 btn bgverdeescuro  ">TAG</a>
-                        <a href="" class=" ml-2 btn bgverdeescuro ">TAG</a>
 
-                        <a href="#" class="btn bgverdeescuro ml-2 ">Compartilhar</a>
-                      </div>
-                    </div>
-                  </div>
+                <div class="d-flex justify-content-between">
 
+                  <a href="" class=" ml-2 btn bgverdeescuro ">{{produto.categoria.palavrachave}}</a>
+                  <!-- <a href="" class=" ml-2 btn bgverdeescuro  ">TAG</a>
+                        <a href="" class=" ml-2 btn bgverdeescuro ">TAG</a> -->
+
+                  <a href="#" class="btn bgverdeescuro ml-2 ">Compartilhar</a>
                 </div>
               </div>
             </div>
+
           </div>
-
-
         </div>
+
       </div>
 
 
     </div>
-
-
   </div>
+
+
+
 </div>

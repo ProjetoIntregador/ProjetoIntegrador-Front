@@ -40,19 +40,8 @@ select:focus, .form-group-sm:focus {
 }
 
 
-.wavebottom {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 80%;
-  height: 80%;
-}
 
-.wavetop {
-  background-image: url(../../assets/imgs/logo/wavetop.svg);
-  background-repeat: no-repeat;
-  background-position: top;
-}
+
 
 .top {
   right: -12%;

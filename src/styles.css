@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 /* Fontes */
 html{
-    font-family: 'Rubik', sans-serif, Verdana, sans-serif; 
+    font-family: 'Rubik', sans-serif, Verdana, sans-serif;
 }
 p{
-    font-family: 'Roboto', sans-serif, Verdana, sans-serif; 
+    font-family: 'Roboto', sans-serif, Verdana, sans-serif;
 }
 span{
-    font-family: 'Roboto', sans-serif, Verdana, sans-serif; 
+    font-family: 'Roboto', sans-serif, Verdana, sans-serif;
 }
 
 /* Cores de texto */
@@ -61,7 +61,7 @@ span{
 
 
 
-    
+
 }
 .verdeclaro {
     color: #C9FFC5;
@@ -105,6 +105,9 @@ span{
 .bgverdeclaro {
     background-color: #C9FFC5;
 }
+/* .bgrodape{
+  background-color: #5000CA;
+} */
 .bgverdeescuro{
     background-color: #88FF7D !important;
 }
@@ -125,3 +128,25 @@ font-size: 26px;
 color: #000000;
 }
 
+.wavebottom {
+  /* background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80%;
+  height: 80%; */
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.wavetop {
+  /* background-image: url(../../assets/imgs/logo/wavetop.svg); */
+  /* background-repeat: no-repeat;
+  background-position: top;
+  width: 100vw;
+  height: 100vh; */
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+}
