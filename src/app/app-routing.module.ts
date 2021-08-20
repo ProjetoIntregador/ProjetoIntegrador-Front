@@ -13,7 +13,7 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 const routes: Routes = [
-  {path: '' , redirectTo:'home', pathMatch: 'full'},
+  {path: '' , redirectTo:'/home', pathMatch: 'full'},
 
   {path: 'entrar', component:EntrarComponent },
   {path: 'cadastrar', component: CadastrarComponent},

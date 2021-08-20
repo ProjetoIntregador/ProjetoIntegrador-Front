@@ -13,8 +13,8 @@ export class CadastrarComponent implements OnInit {
 
   usuario: Usuario = new Usuario
   confirmarSenha: string
-  tipoUsuario: string //trocar para string para ter adm
-
+  tipoUsuario: string
+  // fotoalterada: string
   constructor(
     private authService: AuthService,
      private router: Router,
@@ -35,6 +35,7 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar(){
     this.usuario.empregador = this.tipoUsuario
+    // this.usuario.foto = this.fotoalterada + '.png'
     console.log(this.usuario)
     if(this.usuario.senha != this.confirmarSenha){
       this.alertas.showAlertDanger('A senha esta incorreta.')

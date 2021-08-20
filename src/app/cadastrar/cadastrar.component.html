@@ -42,10 +42,16 @@
           </div>
 
           <div class="form-group-sm">
+            <label class="invisible" for="confirmSenha">Foto de perfil:</label>
+            <input [(ngModel)]='usuario.foto' class="form-control input" type="text" name="foto"
+              id="foto" placeholder="link da sua foto de perfil">
+          </div>
+
+          <div class="form-group-sm">
             <label class="invisible" for="email">Email</label>
             <input class="form-control input my-1 self-align-center " type="email" name="Email" id="Email" placeholder="Digite seu email">
           </div>
-          
+
           <div class="form-group-sm">
             <label class="invisible" for="confirmSenha">Confirme seu Email:</label>
             <input [(ngModel)]='usuario.email' class="form-control input" type="email" name="confirmEmail"
