@@ -5,6 +5,7 @@ import { Usuario } from "./Usuario"
 export class Produto{
     public id: number
     public tema: string
+    public data: Date
     public valor: number // perguntar professor "number" correto ?
     public experiencia: string
     public imagem: string

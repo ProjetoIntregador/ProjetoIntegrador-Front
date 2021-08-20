@@ -17,8 +17,9 @@ import { AlertasService } from '../service/alertas.service';
 })
 export class StartComponent implements OnInit {
 
-  listaProduto:Produto[]
   produto: Produto = new Produto()
+  listaProduto:Produto[]
+  temaProduto: string
 
   categoria: Categoria = new Categoria
   listaCategoria: Categoria[]
@@ -48,7 +49,7 @@ export class StartComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
     // if (environment.token == ''){
-    //   this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente!')
+    //   this.alertas.showAlertInfo('Sua sessão expirou, faça o login novamente!')
     //   this.router.navigate(['/entrar'])
     // }
       this.getAllProduto()
@@ -101,7 +102,7 @@ export class StartComponent implements OnInit {
      console.log(this.produto)
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
       this.produto = resp
-      this.alertas.showAlertSuccess('vaga postada com sucesso!!!')
+      this.alertas.showAlertSuccess('Vaga postada com sucesso!')
       this.produto = new Produto()
       this.getAllProduto()
     })
@@ -114,4 +115,14 @@ export class StartComponent implements OnInit {
   //     this.router.navigate(['/start'])
   //   })
 
+  findByTemaProduto(){
+    if(this.temaProduto == ''){
+      this.getAllProduto()
+    } else {
+
+      this.produtoService.getByTemaProduto(this.temaProduto).subscribe((resp : Produto[])=> {
+        this.listaProduto = resp
+      })
+    }
+  }
 }
