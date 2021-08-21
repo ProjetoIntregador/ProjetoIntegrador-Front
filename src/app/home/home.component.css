@@ -4,7 +4,7 @@
   font-family: "Rubik", sans-serif, Verdana, sans-serif;
 }
 .fs12 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .back {
   width: 100%;
@@ -312,6 +312,10 @@ footer {
 .opacidade{
   opacity: 0.80;
 }
+.ferramenta{
+  height:"50"!important;
+  width:"500%"!important;
+}
 /* .github {
   height: 200%;
 }
@@ -319,3 +323,36 @@ footer {
 .github:hover:not(.active) {
   background-color: #f91a6a;
 } */
+
+
+.item {
+  margin-bottom: 30px
+}
+
+.item .box {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  position: relative;
+  overflow: hidden
+}
+
+.item .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 148, 255, 0.75);
+  transition: opacity 0.15s ease-in;
+  opacity: 0;
+  padding-top: 80px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
+}
+
+.item:hover .cover {
+  opacity: 1
+}
