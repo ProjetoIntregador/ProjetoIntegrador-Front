@@ -31,7 +31,8 @@ export class StartComponent implements OnInit {
   foto = environment.foto
   nome = environment.nomeusuario
 
-
+  key = 'data'
+  reverse = true
 
   idPost: number
   idProduto:number
@@ -125,4 +126,6 @@ export class StartComponent implements OnInit {
       })
     }
   }
+
+  
 }

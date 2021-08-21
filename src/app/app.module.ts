@@ -21,6 +21,7 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TesteComponent } from './teste/teste.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { TesteComponent } from './teste/teste.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
