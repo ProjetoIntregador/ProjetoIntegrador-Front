@@ -18,3 +18,7 @@ body {
   height: auto
 }
 
+.b-0{
+  border: 0px !important;
+  background-color: #F6F5F5;
+}
