@@ -8,6 +8,7 @@ import { Usuario } from '../model/Usuario';
 import { ProdutoService } from '../service/produto.service';
 import { AuthService } from '../service/auth.service';
 import { AlertasService } from '../service/alertas.service';
+import { CoreEnvironment } from '@angular/compiler/src/compiler_facade_interface';
 
 
 @Component({
@@ -30,7 +31,7 @@ export class StartComponent implements OnInit {
   prod2: Produto = new Produto()
   foto = environment.foto
   nome = environment.nomeusuario
-
+  empre = environment.tipo
   key = 'data'
   reverse = true
 
@@ -55,6 +56,7 @@ export class StartComponent implements OnInit {
     // }
       this.getAllProduto()
       this.getAllCategoria()
+
              // this.idPost = this.route.snapshot.params['id']
     }
 
@@ -128,5 +130,5 @@ export class StartComponent implements OnInit {
     }
   }
 
-  
+
 }

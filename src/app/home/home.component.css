@@ -64,7 +64,7 @@ top: 507px; */
     left: 879px;
     top: 225px; */
 
-  font-family: Rubik;
+  font-family:'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
@@ -81,7 +81,7 @@ top: 507px; */
   left: 1042px;
   top: 37px;
 
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -96,7 +96,7 @@ top: 507px; */
   left: 1148px;
   top: 37px;
 
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -182,7 +182,7 @@ top: 977px; */
     height: 337px;
     left: 66px;
     top: 1045px; */
-  font-family: Rubik;
+  font-family: 'Rubik' sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 42px;
@@ -209,7 +209,7 @@ top: 977px; */
     top: 1758px; */
 
   padding-top: 10%;
-  font-family: Rubik;
+  font-family:'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 42px;
@@ -225,7 +225,7 @@ height: 57px;
 left: 570px;
 top: 3096px; */
 
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
@@ -259,7 +259,7 @@ top: 3096px; */
   height: 57px;
   left: 612px;
   top: 2537px;
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
@@ -292,7 +292,9 @@ top: 3096px; */
 .fotoEquipe {
   width: 70%;
 }
-
+/* .fotoEquipe:hover{
+  background-color: #000000 ;
+  } */
 /* Rodapé */
 
 footer {
@@ -306,7 +308,7 @@ footer {
 }
 
 .text5 {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.23rem;
@@ -339,4 +341,13 @@ footer {
 .github:hover:not(.active) {
   background-color: #f91a6a;
 } */
+.nomeEq1:hover{
+ color:#820A97;
+}
+.nomeEq2:hover{
+  color:#F91A6A;
+ }
+ .rounded-circle:hover{
+   opacity: 0.8;
+ }
 

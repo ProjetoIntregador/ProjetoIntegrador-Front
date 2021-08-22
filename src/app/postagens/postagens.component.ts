@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
@@ -17,7 +18,8 @@ export class PostagensComponent implements OnInit {
 
   idCategoria: number
   listaCategoria: Categoria[]
-  
+ 
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,

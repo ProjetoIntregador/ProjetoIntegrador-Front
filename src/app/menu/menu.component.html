@@ -1,6 +1,6 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light rubik">
 
-      <a class="navbar-brand" href="#"><img class="pr-1"src="https://media.discordapp.net/attachments/854719200618217523/878310655843794944/unknown.png" alt="logo" width="35"><span class="rosamagenta">query</span>  <span class="roxoclaro">Jobs</span></a>
+      <a class="navbar-brand" routerLink="/start"><img class="pr-1"src="https://media.discordapp.net/attachments/854719200618217523/878310655843794944/unknown.png" alt="logo" width="35"><span class="rosamagenta">query</span>  <span class="roxoclaro">Jobs</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -8,24 +8,14 @@
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0 align-items-center">
 
         <li class="nav-item pl-3">
-          <p  class=" m-0 font-weight-bold text-black fs-16 .fontepadrao" >Olá, {{nomeusuario}}</p>
+          <p  class=" m-0 font-weight-bold text-black fs-16 .fontepadrao rosamagenta" > Olá,  {{nomeusuario}}</p>
         </li>
-
-            <!--<li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Sobre nós</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contato</a>
-          </li>
-          <li class="nav-item">
-            <img src="{{foto}}" alt="imagem do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
-        </li> -->
 
         </ul>
 
         <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/start">Inicio</a>
+          <li class="nav-item ">
+            <a class="nav-link active " aria-current="page" routerLink="/start">Inicio</a>
            </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['/usuario-edit' , id]">Editar usuario</a>
