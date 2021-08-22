@@ -76,7 +76,7 @@ span{
 /* Cores de fundo */
 
 .bgrosamagenta{
-    background-color: #F91A6A;
+    background-color: #F91A6A !important;
 }
 .bgoffrosa{
     background-color: #FFE9F1;
@@ -91,10 +91,10 @@ span{
     background-color: #820A97;
 }
 .bgroxoescuro {
-    background-color: #700A94;
+    background-color: #700A94 !important;
 }
 .bgazulescuro {
-    background-color: #3E0685;
+    background-color: #3E0685 !important;
 }
 .bgsalmao {
     background-color: #FF7B7B !important;

@@ -6,15 +6,15 @@ body{
 
 
 .background{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #FDEF74;
 }
 
 
-.card {
-    border: none;
-    border-radius: 50px
+.bordagem {
+    border-radius: 50px;
+    height: 350px;
 }
 
 .c-details span {
@@ -60,6 +60,10 @@ body{
 
 .progress div {
     background-color: red
+}
+
+.minimo{
+    min-width: 150px;
 }
 
 /* img{
