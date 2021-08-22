@@ -281,6 +281,9 @@ top: 3096px; */
 .fotoEquipe {
   width: 70%;
 }
+/* .fotoEquipe:hover{
+  background-color: #000000 ;
+  } */
 /* Rodapé */
 
 footer {
@@ -323,3 +326,13 @@ footer {
 .github:hover:not(.active) {
   background-color: #f91a6a;
 } */
+.nomeEq1:hover{
+ color:#820A97;
+}
+.nomeEq2:hover{
+  color:#F91A6A;
+ }
+ .rounded-circle:hover{
+   opacity: 0.8;
+ }
+
