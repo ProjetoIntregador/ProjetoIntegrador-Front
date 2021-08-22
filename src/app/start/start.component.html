@@ -1,245 +1,193 @@
 <div class="bgcinzaclaro fsRubik">
-  <div class="row d-flex justify-content-center  mb-5">
-    <div class="d-flex flex-row justify-content-center align-items-center p-2  bgbrancofeed rounded-pill">
-      <input [(ngModel)]='temaProduto' (keyup)='findByTemaProduto()' type="text" class="form-control b-0" id="temaProduto" name="temaProduto"
-      placeholder="Digite um tipo de trabalho para pesquisar" >
+  <div class=" d-flex justify-content-center  mb-5">
+    <div class="d-flex flex-row justify-content-center align-items-center p-2 bgbrancofeed rounded-pill">
+      <input [(ngModel)]='temaProduto' (keyup)='findByTemaProduto()' type="text" class="form-control b-0"
+        id="temaProduto" name="temaProduto" placeholder="Digite um tipo de trabalho para pesquisar">
     </div>
   </div>
 
-    <!-- fonfonfon -->
-    <div class="d-flex justify-content-center ">
-      <div class="col-md-8 ">
-        <div class="feed p-2">
-          <div *ngIf='this.empre == "empregador"'>
+  <!-- fonfonfon -->
+  <div class="d-flex justify-content-center ">
+    <div class="col-md-8 ">
+      <div class="feed p-2">
+        <div *ngIf='this.empre == "empregador" || this.empre == "adm"'>
           <div class="d-flex flex-row justify-content-center align-items-center p-2  bgverdeclaro rounded-pill">
-            <button class="btn mr-2 font-weight-bold" data-toggle="modal" data-target="#novaPostagem">Publicar nova Vaga</button>
+            <button class="btn mr-2 font-weight-bold" data-toggle="modal" data-target="#novaPostagem">Publicar nova
+              Vaga</button>
           </div>
         </div>
-        <div *ngIf='this.empre == "candidato"'>
-          <div class="d-flex flex-row justify-content-center align-items-center p-2  bgverdeclaro rounded-pill">
-            <button class="btn mr-2 font-weight-bold" data-toggle="modal" data-target="#novaPostagem">Promova-se</button>
+        <div *ngIf='this.empre == "candidato" || this.empre == "adm"'>
+          <div class="d-flex flex-row justify-content-center align-items-center p-2  bgsalmao rounded-pill">
+            <button class="btn mr-2 font-weight-bold" data-toggle="modal"
+              data-target="#novaPostagem">Promova-se</button>
           </div>
         </div>
-          <!-- <div class="bg-white border mt-2">
-          <div *ngFor='let item of listaProduto'>
-            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
 
-              <div>
-                <p class="card-text ">
-                  <img class="rounded-circle" src="{{foto}}" width="45">
-                  <small class="text-muted"><a routerLink="perfil">{{item.usuario.nomeusuario}}</a></small>
+        <div class="bg-white  mt-2 rounded-lg bgbrancofeed "
+          *ngFor='let item of listaProduto | orderBy : key : reverse'>
+
+
+          <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+            <div class="d-flex flex-row align-items-center feed-text px-2">
+              <img class="rounded-circle" src="{{item.usuario.foto}}" width="45">
+              <div class="d-flex flex-column flex-wrap ml-2">
+                <span class="font-weight-bold fs25">{{item.usuario.nomeusuario}}</span>
+                <small class="text-black-50 time"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
+                  'HH:mm'}}</small>
+              </div>
+            </div>
+            <div class="feed-icon px-2 social-action dropdown pull-right"
+              *ngIf=' item.usuario.id == idUsuario || this.empre == "adm"'>
+              <button data-toggle="dropdown" class=" btn bgroxoclaro btn-lg  ">
+                <i class="fa fa-ellipsis-v text-black-50"></i>
+              </button>
+              <ul class="dropdown-menu m-t-xs">
+                <li><a [routerLink]="['/produto-edit',item.id]" class="text-info me-3" href="">Editar</a></li>
+                <li><a [routerLink]="['/produto-delete',item.id]" class="text-danger" href="">Apagar</a></li>
+                <!-- <li><a href="#">Editar</a></li>
+                    <li><a data-toggle="modal" data-target="#apagarPostagem" (click)="findByIdProduto()">Apagar</a></li> -->
+              </ul>
+            </div>
+
+          </div>
+          <div class="d-flex justify-content-center" *ngIf='this.item.usuario.empregador == "empregador"'>
+            <div class="feed-image p-2 px-3">
+              <img class="img-fluid img-responsive" height="30%" src="{{item.imagem}}">
+            </div>
+            <div class="d-flex flex-row align-items-center feed-text px-2">
+              <div class="d-flex justify-content-center flex-column flex-wrapd-flex flex-row align-items-center ml-2">
+                <h6 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h6>
+                <p class="card-text fsRubik">Experiencia: {{item.experiencia}}</p>
+                <p class="card-text fsRubik">Especificação: {{item.especificacao}}</p>
+                <p class="card-text bgverdeescuro rounded-lg p-1 rounded-pill">Valor: {{item.valor | currency: 'BRL'}}
                 </p>
               </div>
-              <div class="d-flex flex-row align-items-center feed-text px-2">
-
-                <div class="d-flex justify-content-center flex-column flex-wrapd-flex flex-row align-items-center ml-2">
-                  <h6 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h6>
-                  <p class="card-text">Experiencia: {{item.experiencia}}</p>
-                  <p class="card-text">Valor: R$ {{item.valor}}</p>
-                </div>
-              </div>
-              <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
-              <div></div>
             </div>
-            <div class=" px-3 p-2 border-bottom "><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.</span>
-              <div class="d-flex justify-content-center socials p-2 py-3  "><i class="fa fa-thumbs-up"></i><i
-                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div></div>
           </div>
-          </div> -->
-
-
-          <div class="bg-white border mt-2 rounded-lg bgbrancofeed " *ngFor='let item of listaProduto | orderBy : key : reverse'>
-
-            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-              <div class="d-flex flex-row align-items-center feed-text px-2">
-                <img class="rounded-circle" src="{{item.usuario.foto}}" width="45">
-                <div class="d-flex flex-column flex-wrap ml-2">
-                  <span class="font-weight-bold fs25">{{item.usuario.nomeusuario}}</span>
-                  <small class="text-black-50 time"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
-                </div>
-              </div>
-                <div class="feed-icon px-2 social-action dropdown pull-right" *ngIf=' item.usuario.id == idUsuario '>
-                  <button data-toggle="dropdown" class=" btn bgroxoclaro btn-lg  ">
-                    <i class="fa fa-ellipsis-v text-black-50"></i>
-                  </button>
-                  <ul class="dropdown-menu m-t-xs">
-                    <li><a [routerLink]="['/produto-edit',item.id]" class="text-info me-3" href="">Editar</a></li>
-                      <li><a  [routerLink]="['/produto-delete',item.id]" class="text-danger" href="">Apagar</a></li>
-                    <!-- <li><a href="#">Editar</a></li>
-                    <li><a data-toggle="modal" data-target="#apagarPostagem" (click)="findByIdProduto()">Apagar</a></li> -->
-                  </ul>
-                </div>
-
-              </div>
-              <div class="d-flex justify-content-center">
-                <div class="feed-image p-2 px-3">
-                  <img class="img-fluid img-responsive" height="30%" src="{{item.imagem}}">
-                </div>
-                <div class="d-flex flex-row align-items-center feed-text px-2">
-                  <div
-                    class="d-flex justify-content-center flex-column flex-wrapd-flex flex-row align-items-center ml-2">
-                    <h6 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h6>
-                    <p class="card-text fsRubik">Experiencia: {{item.experiencia}}</p>
-                    <p class="card-text fsRubik">Especificação: {{item.especificacao}}</p>
-                    <p class="card-text bgverdeescuro rounded-lg p-1 rounded-pill">Valor:  {{item.valor | currency: 'BRL'}}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-heart-o"></i><a
-                  class="fa fa-plus" [routerLink]="['/produto',item.id]" > ver mais </a><i class="fa fa-share"></i></div>
+          <div class="d-flex justify-content-center " *ngIf='this.item.usuario.empregador == "candidato"'>
+            <div class="feed-image p-2 px-3">
+              <img class="img-fluid img-responsive" height="30%" src="{{item.imagem}}">
             </div>
-
+            <div class="d-flex flex-row align-items-center feed-text px-2">
+              <div class="d-flex justify-content-center flex-column flex-wrapd-flex flex-row align-items-center ml-2">
+                <h6 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h6>
+                <p class="card-text fsRubik">Preferência de trabalho: {{item.experiencia}}</p>
+                <p class="card-text fsRubik">Sobre : {{item.especificacao}}</p>
+                <p class="card-text bgsalmao rounded-lg p-1 rounded-pill">Pretenção salarial mínima: {{item.valor |
+                  currency: 'BRL'}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-heart-o"></i><a class="fa fa-plus"
+              [routerLink]="['/produto',item.id]"> ver mais </a><i class="fa fa-share"></i>
           </div>
         </div>
+
       </div>
     </div>
+  </div>
+</div>
 
 
-    <!-- Inicio da Modal Apagar postagem -->
-    <!-- <div class="modal fade" id="apagarPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="TituloModalCentralizado"> Apagar </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-12">
-                <h4 class="text-center text-secondary">Você tem certeza que deseja apagar essa vaga?</h4>
-              </div>
-            </div>
 
-            <div class="row d-flex justify-content-center mt-4">
-              <div class="col-md-4">
-                <div class="card text-center">
-                  <div class="card-body">
 
-                   <h5 class="card-title m-0">{{produto.tema}}</h5>
-              <small class="text-muted" >Tema: {{produto.categoria.descricao}}</small>
-              <p class="card-text mt-3">{{produto.especificacao}}</p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- Inicio da Modal Nova postagem -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" *ngIf='this.empre == "empregador"'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Vaga</label>
+          <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
+            placeholder="Digite o nome da vaga">
         </div>
-        <div class="row mt-5">
-          <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-danger mr-4" data-dissmis="modal">Não</button>
-            <button class="btn btn-success" data-dissmis="modal" (click)='apagar()'>Sim</button>
+        <div class="form-group">
+          <label for="titulo">Preferência de experiência</label>
+          <input [(ngModel)]='produto.experiencia' type="text" class="form-control" name="experiencia" id="experiencia"
+            placeholder="Digite a experiencia ">
+        </div>
+        <div class="form-group">
+          <label for="titulo">Valor</label>
+          <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
+            placeholder="Digite o valor">
+        </div>
 
+        <div class="form-group">
+          <label for="texto">Descrição da vaga</label>
+          <textarea [(ngModel)]='produto.especificacao' class="form-control" name="texto" id="texto"
+            rows="3"></textarea>
+        </div>
 
-          </div>
+        <div class="form-group">
+          <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
+              uma Nova</a></label>
+
+          <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
+            (change)='findByIdCategoria'>
+            <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
+          </select>
         </div>
       </div>
-    </div> -->
-    <!--Fim da Modal-->
-
-    <!-- Inicio da Modal Nova postagem -->
-    <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document"  *ngIf='this.empre == "empregador"'>
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="titulo">Vaga</label>
-              <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
-                placeholder="Digite o nome da vaga">
-            </div>
-            <div class="form-group">
-              <label for="titulo">Preferência de experiência</label>
-              <input [(ngModel)]='produto.experiencia' type="text" class="form-control" name="experiencia"
-                id="experiencia" placeholder="Digite a experiencia ">
-            </div>
-            <div class="form-group">
-              <label for="titulo">Valor</label>
-              <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
-                placeholder="Digite o valor">
-            </div>
-
-            <div class="form-group">
-              <label for="texto">Descrição da vaga</label>
-              <textarea [(ngModel)]='produto.especificacao' class="form-control" name="texto" id="texto"
-                rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
-                  uma Nova</a></label>
-
-              <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
-                (change)='findByIdCategoria'>
-                <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-dialog modal-dialog-centered" role="document"  *ngIf='this.empre == "candidato"'>
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="TituloModalCentralizado">Promova-se</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="titulo">Seu Nome:</label>
-              <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
-                placeholder="Digite o nome da vaga">
-            </div>
-            <div class="form-group">
-              <label for="titulo">Preferência de trabalho</label>
-              <input [(ngModel)]='produto.experiencia' type="text" class="form-control" name="experiencia"
-                id="experiencia" placeholder="Digite a prefereencia">
-            </div>
-            <div class="form-group">
-              <label for="titulo">Pretenção salarial mínima</label>
-              <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
-                placeholder="Digite o valor">
-            </div>
-
-            <div class="form-group">
-              <label for="texto">Fala sobre você e qual melhor forma de entrar em contato.</label>
-              <textarea [(ngModel)]='produto.especificacao' class="form-control" name="texto" id="texto"
-                rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
-                  uma Nova</a></label>
-
-              <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
-                (change)='findByIdCategoria'>
-                <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
-          </div>
-        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
       </div>
     </div>
-    <!--Fim da Modal-->
+  </div>
+  <!-- modal diferente para o candidato  -->
+  <div class="modal-dialog modal-dialog-centered" role="document" *ngIf='this.empre == "candidato"'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Promova-se</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Seu Nome:</label>
+          <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
+            placeholder="Digite o nome da vaga">
+        </div>
+        <div class="form-group">
+          <label for="titulo">Preferência de trabalho</label>
+          <input [(ngModel)]='produto.experiencia' type="text" class="form-control" name="experiencia" id="experiencia"
+            placeholder="Digite a prefereencia">
+        </div>
+        <div class="form-group">
+          <label for="titulo">Pretenção salarial mínima</label>
+          <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
+            placeholder="Digite o valor">
+        </div>
 
+        <div class="form-group">
+          <label for="texto">Fala sobre você e qual melhor forma de entrar em contato.</label>
+          <textarea [(ngModel)]='produto.especificacao' class="form-control" name="texto" id="texto"
+            rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
+              uma Nova</a></label>
+
+          <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
+            (change)='findByIdCategoria'>
+            <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.tipotrabalho}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fim da Modal-->

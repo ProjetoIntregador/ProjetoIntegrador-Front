@@ -18,8 +18,8 @@ export class PostagensComponent implements OnInit {
 
   idCategoria: number
   listaCategoria: Categoria[]
-  empre:string
-  
+ 
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
