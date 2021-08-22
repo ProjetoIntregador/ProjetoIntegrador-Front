@@ -3,9 +3,11 @@
 .rubik {
   font-family: "Rubik", sans-serif, Verdana, sans-serif;
 }
+
 .fs12 {
   font-size: 1.3rem;
 }
+
 .back {
   width: 100%;
   height: 100%;
@@ -14,6 +16,7 @@ top: 112px; */
   background-color: #fdef74;
   z-index: -4;
 }
+
 .backgroundRosa {
   width: 100%;
   height: 100%;
@@ -102,19 +105,25 @@ top: 507px; */
 }
 
 .entrar {
-  /* position: absolute;
-width: 103px;
-height: 43px;
-left: 1289px;
-top: 30px; */
 
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 36px;
-  line-height: 43px;
   color: #f91a6a !important;
 }
+.entrar:hover {
+  text-decoration: none;
+  color: #700A94;
+}
+
+.entrar:focus {
+  border-radius: 3px;
+  padding: 2px;
+  box-shadow: 0 0 0 0.2rem rgba(249, 26, 108, 0.459) !important;
+}
+
+
 .imgGene {
   width: 70%;
   text-align: center;
@@ -150,12 +159,14 @@ border-radius: 1000px; */
   left: 0;
   right: 0;
 }
+
 .onda2 {
   position: relative;
   bottom: 0;
   left: 0;
   right: 0;
 }
+
 /* .foto1{
 /* position: absolute;
 width: 476px;
@@ -281,6 +292,7 @@ top: 3096px; */
 .fotoEquipe {
   width: 70%;
 }
+
 /* Rodapé */
 
 footer {
@@ -301,21 +313,25 @@ footer {
   text-align: center;
   color: #000000;
 }
-.ondaFooter{
+
+.ondaFooter {
   position: relative;
   bottom: 0;
   background-image: url(../../assets/imgs/imagensdahome/logoComLetra);
   background-repeat: no-repeat;
-  background-position: left ;
+  background-position: left;
 
 }
-.opacidade{
+
+.opacidade {
   opacity: 0.80;
 }
-.ferramenta{
-  height:"50"!important;
-  width:"500%"!important;
+
+.ferramenta {
+  height: "50" !important;
+  width: "500%" !important;
 }
+
 /* .github {
   height: 200%;
 }
@@ -324,35 +340,3 @@ footer {
   background-color: #f91a6a;
 } */
 
-
-.item {
-  margin-bottom: 30px
-}
-
-.item .box {
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 280px;
-  position: relative;
-  overflow: hidden
-}
-
-.item .cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(31, 148, 255, 0.75);
-  transition: opacity 0.15s ease-in;
-  opacity: 0;
-  padding-top: 80px;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
-}
-
-.item:hover .cover {
-  opacity: 1
-}

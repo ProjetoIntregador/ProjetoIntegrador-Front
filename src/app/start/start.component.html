@@ -1,8 +1,8 @@
 <div class="bgcinzaclaro fsRubik">
-  <div class="row d-flex justify-content-center mt-5 mb-5">
+  <div class="row d-flex justify-content-center  mb-5">
     <div class="col-md-4">
-      <input [(ngModel)]='temaProduto' (keyup)='findByTemaProduto()' type="text" class="form-control" id="temaProduto" name="temaProduto" 
-      placeholder="Digite um tipo de trabalho para pesquisar" > 
+      <input [(ngModel)]='temaProduto' (keyup)='findByTemaProduto()' type="text" class="form-control" id="temaProduto" name="temaProduto"
+      placeholder="Digite um tipo de trabalho para pesquisar" >
     </div>
   </div>
 
@@ -77,7 +77,7 @@
                     <h6 class="card-title">Categoria: {{item.categoria.tipotrabalho}}</h6>
                     <p class="card-text fsRubik">Experiencia: {{item.experiencia}}</p>
                     <p class="card-text fsRubik">Especificação: {{item.especificacao}}</p>
-                    <p class="card-text bgverdeescuro rounded-lg p-1 rounded-pill">Valor: R$ {{item.valor}}</p>
+                    <p class="card-text bgverdeescuro rounded-lg p-1 rounded-pill">Valor:  {{item.valor | currency: 'BRL'}}</p>
                   </div>
                 </div>
               </div>

@@ -101,6 +101,7 @@ export class StartComponent implements OnInit {
     this.usuario.id = this.idUsuario
     this.produto.usuario = this.usuario
      console.log(this.produto)
+     console.log(environment)
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) =>{
       this.produto = resp
       this.alertas.showAlertSuccess('Vaga postada com sucesso!')

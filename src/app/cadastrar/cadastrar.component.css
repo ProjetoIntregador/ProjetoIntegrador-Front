@@ -14,29 +14,24 @@ small{
   background-color: #fff;
 }
 
-.borda{
+/* .borda{
   border: 3px solid red;
-}
+} */
 
 .btntipouser {
-    border: 0.17rem solid #700A94;
+    border: 0.25rem solid #700A94;
+    padding:10px 2px;
     background-color: #fff;
     border-radius: 12px;
     cursor: pointer;
-    align-content: center;
+   justify-content: center;
 }
 
 .btntipouser:hover{
   background: transparent;
-  border: 0.17rem solid #c677da;
+  border: 0.25rem solid #c677da;
 }
 
-.contorno-tipouser{
- 
-  background-color:#FDEF74;
-  border-radius: 15px;
-  
-}
 
 .background {
   height: 100%;
@@ -71,6 +66,11 @@ small{
   left: 0;
 }
 
+.wavebottom2 {
+  position: absolute;
+  bottom: -22vw;
+  left: 0;
+}
 .wavetop {
   position: absolute;
   top: 0;
@@ -107,8 +107,8 @@ small{
 /* Pós clique*/
 [type=radio]:checked + i {
   background-color: #700A94;
-  outline:  0.17rem solid #700A94  ;
- 
+  outline:  0.6rem solid #700A94  ;
+
 
 }
 

@@ -74,7 +74,7 @@ span {
 /* Cores de fundo */
 
 .bgrosamagenta {
-  background-color: #F91A6A;
+  background-color: #F91A6A !important;
 }
 
 .bgoffrosa {
@@ -94,11 +94,11 @@ span {
 }
 
 .bgroxoescuro {
-  background-color: #700A94;
+  background-color: #700A94 !important;
 }
 
 .bgazulescuro {
-  background-color: #3E0685;
+  background-color: #3E0685 !important;
 }
 
 .bgsalmao {
@@ -178,6 +178,7 @@ span {
   border-bottom: 0.15rem solid #700A94 !important;
   border-radius: 0 !important;
   height: 43px !important;
+  width: 90%;
 }
 
 .input:focus,
@@ -195,14 +196,31 @@ span {
 }
 
 /* Ícones junto dos agrupados aos inputs */
-.input-group-text{
-    padding: 0% !important;
-    margin: 0% !important;
-    background-color: transparent !important;
-    border: none !important;
-  }
+.input-group-text {
+  padding: 0% !important;
+  margin: 0% !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+ 
+}
+.input-group-text i {
+  background-color: #F91A6A !important;
+  border-radius: 50%;
+  padding: 3px;
+  border: 4px solid #F91A6A;
+  color: #fff !important;
+ 
+}
+.input-group-text i:hover {
+  background-color: #fff !important;
+  border-radius: 50%;
+  padding: 3px;
+  border: 4px solid #fff;
+  color: #F91A6A !important;
+}
 
-  /* Formularios */
-  .formulario label{
-    margin-bottom: 0;
-  }
+/* Formularios */
+.formulario label {
+  margin-bottom: 0;
+}
