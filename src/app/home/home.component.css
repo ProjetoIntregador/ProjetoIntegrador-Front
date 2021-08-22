@@ -4,7 +4,7 @@
   font-family: "Rubik", sans-serif, Verdana, sans-serif;
 }
 .fs12 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .back {
   width: 100%;
@@ -311,6 +311,10 @@ footer {
 }
 .opacidade{
   opacity: 0.80;
+}
+.ferramenta{
+  height:"50"!important;
+  width:"500%"!important;
 }
 /* .github {
   height: 200%;

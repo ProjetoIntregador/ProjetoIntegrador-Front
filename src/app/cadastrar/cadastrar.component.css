@@ -71,6 +71,16 @@ select:focus, .form-group-sm:focus {
     color: #FF74E3;
 
 }
+
+.fa-code{
+  font-size: 30pt;
+  color: #F91A6A;
+}
+.fa-code:hover{
+    background: none;
+    color: #FF74E3;
+
+}
 .wavebottom {
   position: absolute;
   bottom: 0;

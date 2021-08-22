@@ -17,10 +17,17 @@
           <div>
 
           </div>
-            <!-- Botão tipo de usuario
-          <button type="submit" class="btntipouser" (click)='tipoUser($event)'>
-              <i class="fas fa-briefcase"></i>
-          </button> -->
+            <!-- Botão tipo de usuario -->
+            <div>
+              <button type="submit" class="btntipouser" (click)='tipoUser($event)'>
+                <i class="fas fa-briefcase"></i>
+            </button>
+
+            <button type="submit" class="btntipouser" (change)='tipoUser($event)'>
+             <i class="fas fa-code"></i>
+          </button>
+            </div>
+        
           <div class="form-group-sm">
             <label for="tipoUsuario textinho">Tipo de Usuário:</label>
             <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
