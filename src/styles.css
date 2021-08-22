@@ -62,7 +62,15 @@ span{
 
 
 
+
+
 }
+
+.preto{
+    color: #000000 !;
+}
+
+
 .verdeclaro {
     color: #C9FFC5;
 }
@@ -103,7 +111,7 @@ span{
     background-color: #FDEF74;
 }
 .bgverdeclaro {
-    background-color: #C9FFC5;
+    background-color: #C9FFC5 !important;
 }
 /* .bgrodape{
   background-color: #5000CA;
