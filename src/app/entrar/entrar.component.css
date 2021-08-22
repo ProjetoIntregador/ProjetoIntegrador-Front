@@ -2,51 +2,12 @@ body {
   padding: 0;
   margin: 0;
 }
-
-.input {
-  position: relative;
-
-  display: inline-block;
-  border: none;
-  border-bottom: 0.15rem solid #700A94;
-  border-radius: 0;
-  width: 90%;
-  height: 35px;
-}
-.input:focus,
-select:focus, .form-group-sm:focus {
-
-  border-color: #F91A6A !important;
-  outline: 0 !important;
-  border-radius: 5px !important;
-  -webkit-transition: width 0.4s ease !important;
-  transition: width 0.4s ease !important;
-  box-shadow: 0 0 0 0.2rem rgba(249, 26, 108, 0.25) !important;
-}
-
-.btntipouser {
-    border-color: #700A94;
-    background-color: none;
-    padding: 5px;
-    margin: 1%;
-    border-radius: 5px;
-
-}
-
 .background {
   height: 100vh;
   background-color: #FDEF74;
   width: 100vw;
 }
 
-
-
-
-
-.top {
-  right: -12%;
-  z-index: 1000;
-}
 
 .bolha{
   background-image: url(../../assets/imgs/logo/bolha.svg);
@@ -62,7 +23,6 @@ select:focus, .form-group-sm:focus {
   height: auto;
 }
 
-
 .boxhome {
   width: 120%;
   height: 150%;
@@ -71,14 +31,7 @@ select:focus, .form-group-sm:focus {
   border-radius: 50px;
   z-index: 1000;
 }
+
 .textinho {
   font-size: 0.9em;
-}
-.btnsucess {
-
-  background-color: #700A94;
-  padding: 6px;
-  margin: 2%;
-  border-radius: 25px;
-  color:#fff;
 }

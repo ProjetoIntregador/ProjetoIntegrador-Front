@@ -1,131 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
 /* Fontes */
-html{
-    font-family: 'Rubik', sans-serif, Verdana, sans-serif;
+.fsRubik {
+  font-family: Rubik;
 }
-p{
-    font-family: 'Roboto', sans-serif, Verdana, sans-serif;
+
+.fs25 {
+  font-family: Rubik;
+  font-size: 26px;
+  color: #000000;
 }
-span{
-    font-family: 'Roboto', sans-serif, Verdana, sans-serif;
+
+html {
+  font-family: 'Rubik', sans-serif, Verdana, sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif, Verdana, sans-serif;
+}
+
+span {
+  font-family: 'Roboto', sans-serif, Verdana, sans-serif;
 }
 
 /* Cores de texto */
-.rosamagenta{
-    color: #F91A6A;
+.rosamagenta {
+  color: #F91A6A;
 }
-.offrosa{
-    color: #FFE9F1;
+
+.offrosa {
+  color: #FFE9F1;
 }
+
 .rosaclaro {
-    color: #FF9DF5;
+  color: #FF9DF5;
 }
+
 .rosaescuro {
-    color:#FF74E3;
+  color: #FF74E3;
 }
+
 .roxoclaro {
-    color: #820A97;
+  color: #820A97;
 }
+
 .roxoescuro {
-    color: #700A94;
+  color: #700A94;
 }
+
 .azulescuro {
-    color: #3E0685;
+  color: #3E0685;
 }
+
 .salmao {
-    color: #FF7B7B;
+  color: #FF7B7B;
 }
+
 .amareloclaro {
-    color: #FDEF74;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  color: #FDEF74;
 }
+
 .verdeclaro {
-    color: #C9FFC5;
+  color: #C9FFC5;
 }
-.verdeescuro{
-    color: #88FF7D;
+
+.verdeescuro {
+  color: #88FF7D;
 }
-.cinzaclaro{
-    color: #D6D8E5;
+
+.cinzaclaro {
+  color: #D6D8E5;
 }
 
 /* Cores de fundo */
 
-.bgrosamagenta{
-    background-color: #F91A6A;
+.bgrosamagenta {
+  background-color: #F91A6A;
 }
-.bgoffrosa{
-    background-color: #FFE9F1;
+
+.bgoffrosa {
+  background-color: #FFE9F1;
 }
+
 .bgrosaclaro {
-    background-color: #FF9DF5 !important;
+  background-color: #FF9DF5 !important;
 }
+
 .bgrosaescuro {
-    background-color:#FF74E3 !important;
+  background-color: #FF74E3 !important;
 }
+
 .bgroxoclaro {
-    background-color: #820A97;
+  background-color: #820A97;
 }
+
 .bgroxoescuro {
-    background-color: #700A94;
+  background-color: #700A94;
 }
+
 .bgazulescuro {
-    background-color: #3E0685;
+  background-color: #3E0685;
 }
+
 .bgsalmao {
-    background-color: #FF7B7B !important;
+  background-color: #FF7B7B !important;
 }
+
 .bgamareloclaro {
-    background-color: #FDEF74;
+  background-color: #FDEF74;
 }
+
 .bgverdeclaro {
-    background-color: #C9FFC5;
+  background-color: #C9FFC5;
 }
+
 /* .bgrodape{
   background-color: #5000CA;
 } */
-.bgverdeescuro{
-    background-color: #88FF7D !important;
-}
-.bgcinzaclaro{
-    background-color: #D6D8E5;
-}
-.bgbrancofeed{
-  background-color: #F6F5F5;
+.bgverdeescuro {
+  background-color: #88FF7D !important;
 }
 
-/* fontes */
-.fsRubik{
-  font-family:Rubik;
+.bgcinzaclaro {
+  background-color: #D6D8E5;
 }
-.fs25{
-font-family: Rubik;
-font-size: 26px;
-color: #000000;
+
+.bgbrancofeed {
+  background-color: #F6F5F5;
 }
 
 .wavebottom {
@@ -135,10 +135,11 @@ color: #000000;
   width: 80%;
   height: 80%; */
   position: absolute;
-  bottom:0;
-  left:0;
-  right:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 .wavetop {
   /* background-image: url(../../assets/imgs/logo/wavetop.svg); */
   /* background-repeat: no-repeat;
@@ -146,7 +147,62 @@ color: #000000;
   width: 100vw;
   height: 100vh; */
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
+
+/* Botões */
+
+.btnsucess {
+
+  background-color: #700A94 !important;
+  padding: 8px 6pxn 8px 6px !important;
+  margin: 5% !important;
+  border-radius: 25px !important;
+  color: #fff !important;
+}
+
+.btncancel {
+
+  background-color: #F91A6A !important;
+  padding: 8px 6pxn 8px 6px !important;
+  margin: 5% !important;
+  border-radius: 25px !important;
+  color: #fff !important;
+}
+
+/* Inputs */
+.input {
+  border: none !important;
+  border-bottom: 0.15rem solid #700A94 !important;
+  border-radius: 0 !important;
+  height: 43px !important;
+}
+
+.input:focus,
+.form-group-sm:focus {
+  outline: 0 !important;
+  border-radius: 3px !important;
+  border-color: #F91A6A !important;
+  box-shadow: 0 -0.1rem 0 0.2rem rgba(249, 26, 108, 0.39) !important;
+}
+
+.input:hover {
+  border: none;
+  border-color: #F91A6A !important;
+  transition: width 0.4s step-end !important;
+}
+
+/* Ícones junto dos agrupados aos inputs */
+.input-group-text{
+    padding: 0% !important;
+    margin: 0% !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  /* Formularios */
+  .formulario label{
+    margin-bottom: 0;
+  }

@@ -1,109 +1,122 @@
-<div class="background container-fluid">
+<div class="container-fluid background">
 
+  <div class="row borda">
+    <div class="col-md-6 borda">
+      <div class="formulario borda">
 
-  <!-- Onda de cima -->
-  <svg class="wavetop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#FF9DF5" fill-opacity="1"
-      d="M0,160L48,133.3C96,107,192,53,288,58.7C384,64,480,128,576,181.3C672,235,768,277,864,277.3C960,277,1056,235,1152,192C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-    </path>
-  </svg>
+        <h4 class="text-center roxoclaro">Cadastro</h4>
 
-  <div class="row d-flex ">
-    <div class="col-sm-4 boxhome mx-4">
-      <div class="row d-flex justify-content-center textinho">
+        <!-- Botão tipo de usuario -->
+        <div class="row borda">
+          <label class="roxoescuro text-center" for="tipoUsuario">Sou:</label>
+        </div>
+        <div class="row d-flex borda self-align-center justify-content-around">
 
-        <div class="col-md-10 py-3 self-align-center justify-content-center">
-          <h5 class="text-center roxoclaro">Cadastro</h5>
-          <div>
+          <!-- Empregador -->
+          <div class="col-3 borda">
+
+            <label class="btntipouser" for="empregador">
+              <input type="radio" id='empregador' name="tipoUsuario" value="empregador" (change)='tipoUser($event)'>
+              <i class="fas fa-briefcase"></i>
+            </label>
+            <label class="contorno-tipouser" id="empregador" for="empregador"><small
+                class="textinho">Empregador</small></label>
 
           </div>
-            <!-- Botão tipo de usuario -->
-            <div>
-              <button type="submit" class="btntipouser" (click)='tipoUser($event)'>
-                <i class="fas fa-briefcase"></i>
-            </button>
+          <!-- Candidato -->
+          <div class="col-3 d-flex flex-column align-itens-center borda">
 
-            <button type="submit" class="btntipouser" (change)='tipoUser($event)'>
-             <i class="fas fa-code"></i>
-          </button>
+            <label class="btntipouser" for="candidato">
+              <input type="radio" id='candidato' name="tipoUsuario" value="candidato" class=""
+                (change)='tipoUser($event)'>
+              <i class="fas fa-code"></i>
+            </label>
+
+            <label id="candidato" class="contorno-tipouser" for="candidato"><small
+                class="textinho">Candidato</small></label>
+          </div>
+        </div>
+
+        <div class="form-group-sm ">
+          <label class="" for="nomeusuario">Digite seu nome:</label>
+          <input [(ngModel)]='usuario.nomeusuario' class="form-control input my-1" type="text" name="nomeusuario"
+            id="nomeusuario" placeholder="Digite seu nome.">
+        </div>
+
+        <div class="form-group-sm">
+          <label class="" for="DataNascimento">Data de nascimento:</label>
+          <input [(ngModel)]='usuario.datanascimento' class="form-control input my-1" type="date" name="dataNasc"
+            id="dataNasc" placeholder="Digite seu usuário.">
+        </div>
+
+        <div class="form-group-sm">
+          <label class="" for="genero">Pronomes (opcional):</label>
+          <input [(ngModel)]='usuario.genero' class="form-control input" type="text" name="genero" id="genero"
+            placeholder="Digite seus pronomes">
+        </div>
+
+        <!--NÃO ESQUECER DE COLOCAR O CAMPO IMAGEM COM O JPG PADRÃO NO INPUT-->
+        <div class="form-group-sm">
+          <label class="" for="confirmSenha">Foto de perfil:</label>
+          <input [(ngModel)]='usuario.foto' class="form-control input" type="text" name="foto" id="foto"
+            placeholder="Link da sua foto de perfil">
+        </div>
+
+        <div class="form-group-sm">
+          <label class="" for="email">Email</label>
+          <div class="input-group-text">
+            <i class="fas fa-at roxoescuro"></i>
+            <div class="input-group-text ghost transparence"></div>
+            <input class="form-control input my-1 self-align-center " type="email" name="Email" id="Email"
+              placeholder="Digite seu email">
+          </div>
+
+        </div>
+
+        <div class="form-group-sm">
+          <label class="" for="confirmSenha">Confirme seu Email:</label>
+          <div class="input-group-text">
+            <i class="fas fa-at roxoescuro"></i>
+          <input [(ngModel)]='usuario.email' class="form-control input" type="email" name="confirmEmail"
+            id="confirmEmail" placeholder="Confirme seu email.">
             </div>
-        
-          <div class="form-group-sm">
-            <label for="tipoUsuario textinho">Tipo de Usuário:</label>
-            <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
-              <option class="">Selecione um tipo de usuário:</option>
-              <option value="candidato">Candidato</option>
-              <option value="empregador">Empregador</option>
-            </select>
-          </div>
-          <div class="form-group-sm ">
-            <label class="invisible" for="nomeusuario">Digite seu nome:</label>
-            <input [(ngModel)]='usuario.nomeusuario' class="form-control input my-1" type="text" name="nomeusuario"
-              id="nomeusuario" placeholder="Digite seu nome.">
-          </div>
+        </div>
 
-          <div class="form-group-sm">
-            <label class="invisible" for="DataNascimento">Data de nascimento:</label>
-            <input [(ngModel)]='usuario.datanascimento' class="form-control input my-1" type="date" name="dataNasc"
-              id="dataNasc" placeholder="Digite seu usuário.">
-          </div>
+        <div class="form-group-sm">
+          <label class="" for="usuario">Senha:</label>
+          <div class="input-group-text">
+            <i class="fas fa-key roxoescuro"></i>
+          <input (input)='confirmSenha($event)' class="form-control input" type="password" name="senha" id="senha"
+            placeholder="Digite sua senha.">
+            </div>
+        </div>
 
-          <div class="form-group-sm">
-            <label class="invisible" for="confirmSenha">Foto de perfil:</label>
-            <input [(ngModel)]='usuario.foto' class="form-control input" type="text" name="foto"
-              id="foto" placeholder="link da sua foto de perfil">
-          </div>
-
-          <div class="form-group-sm">
-            <label class="invisible" for="email">Email</label>
-            <input class="form-control input my-1 self-align-center " type="email" name="Email" id="Email" placeholder="Digite seu email">
-          </div>
-
-          <div class="form-group-sm">
-            <label class="invisible" for="confirmSenha">Confirme seu Email:</label>
-            <input [(ngModel)]='usuario.email' class="form-control input" type="email" name="confirmEmail"
-              id="confirmEmail" placeholder="Confirme seu email.">
-          </div>
-
-          <div class="form-group-sm">
-            <label class="invisible" for="usuario">Senha:</label>
-            <input (input)='confirmSenha($event)' class="form-control input" type="password" name="senha" id="senha"
-              placeholder="Digite sua senha.">
-          </div>
-
-          <div class="form-group-sm">
-            <label class="invisible" for="confirmSenha">Confirme sua senha:</label>
+        <div class="form-group-sm">
+          <label class="" for="confirmSenha">Confirme sua senha:</label>
+          <div class="input-group-text">
+            <i class="fas fa-key roxoescuro"></i>
             <input [(ngModel)]='usuario.senha' class="form-control input" type="password" name="confirmSenha"
               id="confirmSenha" placeholder="Confirme sua senha.">
           </div>
-
-          <!--NÃO ESQUECER DE COLOCAR O CAMPO IMAGEM COM O JPG PADRÃO NO INPUT-->
-          <button class="btn btncancel me-4" routerLink='/entrar'>Cancelar</button>
-          <button type="submit" class="btn btnsucess" (click)='cadastrar()'>Cadastrar</button>
         </div>
+
+        <button class="btn btncancel me-4" routerLink='/entrar'>Cancelar</button>
+        <button type="submit" class="btn btnsucess" (click)='cadastrar()'>Cadastrar</button>
+      </div>
+
+    </div>
+
+    <div class="row borda">
+      <div class="col-md-6">
+        <div class="align-itens-center d-flex flex-column">
+          <!-- Imagens -->
+          <div class="bolha-cadastro imgsize">
+            <img class="imgsize" src="../../assets/imgs/cadastrar/Programmer-cuate-1.png"
+              alt="Programador negro, vestido de rosa com cabelo cacheado de frente ao computador codando">
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- Imagem -->
-    <div class="col-sm-4 top ">
-      <img class="imgsize" src="./assets/imgs/cadastrar/Programmer-cuate-1.png"
-        alt="Programador negro, vestido de rosa com cabelo cacheado de frente ao computador codando">
-    </div>
-
-    <div class="col-sm-4 blob  ">
-      <img class="imgsize blob" src="./assets/imgs/cadastrar/blob.svg" alt="">
-
-    </div>
-
-
-
-    <!-- Onda de baixo -->
-    <svg class="wavebottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#FF9DF5" fill-opacity="1"
-        d="M0,96L48,112C96,128,192,160,288,192C384,224,480,256,576,234.7C672,213,768,139,864,90.7C960,43,1056,21,1152,53.3C1248,85,1344,171,1392,213.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-
-
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   </div>
