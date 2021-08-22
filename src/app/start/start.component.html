@@ -19,7 +19,7 @@
         <div *ngIf='this.empre == "candidato" || this.empre == "adm"'>
           <div class="d-flex flex-row justify-content-center align-items-center p-2  bgsalmao rounded-pill">
             <button class="btn mr-2 font-weight-bold" data-toggle="modal"
-              data-target="#novaPostagem">Promova-se</button>
+              data-target="#promove">Promova-se</button>
           </div>
         </div>
 
@@ -94,7 +94,7 @@
 <!-- Inicio da Modal Nova postagem -->
 <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
   aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document" *ngIf='this.empre == "empregador"'>
+  <div class="modal-dialog modal-dialog-centered" role="document" >
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
@@ -141,8 +141,11 @@
       </div>
     </div>
   </div>
+</div>
+  <div class="modal fade" id="promove" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true" >
   <!-- modal diferente para o candidato  -->
-  <div class="modal-dialog modal-dialog-centered" role="document" *ngIf='this.empre == "candidato"'>
+  <div class="modal-dialog modal-dialog-centered" role="document" >
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="TituloModalCentralizado">Promova-se</h5>
