@@ -40,11 +40,11 @@ span {
 }
 
 .roxoclaro {
-  color: #820A97;
+    color: #820A97 !important;
 }
 
 .roxoescuro {
-  color: #700A94;
+    color: #700A94 !important;
 }
 
 .azulescuro {
@@ -52,7 +52,7 @@ span {
 }
 
 .salmao {
-  color: #FF7B7B;
+    color: #FF7B7B !important;
 }
 
 .amareloclaro {
