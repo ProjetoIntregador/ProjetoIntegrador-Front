@@ -17,22 +17,30 @@
   <div class="d-flex justify-content-around">
     <div class="row d-flex align-items-center">
       <div class="col-md-4">
-        <div class="row d-flex justify-content-center  boxhome">
+        <div class="row d-flex justify-content-center boxhome">
           <h1>Entrar</h1>
 
           <form action="" class="d-flex flex-column">
-            <label class="" for="email">Email</label>
-            <input [(ngModel)]='usuarioLogin.email' class="form-control input" type="text" name="email" id="email"
-              placeholder="Digite seu e-mail">
+            
+            <label class="font-weight-bold roxoescuro my-2" for="email">Email</label>
+            <div class="input-group-text">
+              <i class="fas fa-at rosamagenta"></i>
+              <input [(ngModel)]='usuarioLogin.email' class="form-control input " type="text" name="email" id="email"
+                placeholder="Digite seu e-mail">
+            </div>
 
-            <label class="" for="senha">Senha</label>
-            <input [(ngModel)]='usuarioLogin.senha' class="form-control input mb-5" type="password" name="senha"
-              id="senha" placeholder="Digite sua senha">
+            <label class="font-weight-bold roxoescuro my-2" for="senha">Senha</label>
+            <div class="input-group-text">
+              <i class="fas fa-key rosamagenta"></i>
+              <input [(ngModel)]='usuarioLogin.senha' class="form-control input mb-2" type="password" name="senha"
+                id="senha" placeholder="Digite sua senha">
+            </div>
 
-            <button class="btn btnsucess" type="button" (click)='entrar()'>Entrar</button>
+            <button class="d-flex justify-content-center btn btnsucess font-weight-bold my-4  w-100" type="button" (click)='entrar()'>Entrar</button>
 
-            <p>Ainda não tem conta?<a class="select-a2 textinho" routerLink='/cadastrar'> Cadastre-se</a></p>
-            <a class="select-a1 textinho btn" href="#/entrar" routerLink='/home'>Voltar para home</a>
+            <p>Ainda não tem conta?<a class="select-a2 textinho font-weight-bold " routerLink='/cadastrar'> Cadastre-se</a></p>
+            
+            <a class="select-a1 textinho btn font-weight-bold" href="#/entrar" routerLink='/home'>Voltar para home</a>
           </form>
 
         </div>
