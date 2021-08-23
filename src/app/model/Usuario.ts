@@ -10,4 +10,5 @@ export class Usuario{
     public foto: string   //lembrar de fazer input com .jpeg configurado
     public empregador: string
     public produto: Produto[]
+    public curtidas: number
 }

@@ -1,4 +1,4 @@
-body {
+/* body {
   padding: 0;
   margin: 0;
 }
@@ -96,10 +96,10 @@ select:focus,
 
 .textinho {
   font-size: 0.70em;
-}
+} */
+/* ----------------------- */
 
-
-/* 
+/*
   Antiga imagem em fundo
    #img-bg{
       background-image: url('/assets/imgs/cadastrar/Programmer-cuate-1.png');
@@ -107,6 +107,120 @@ select:focus,
       min-height: 695px;
       background-position: right;
       background-repeat: no-repeat;
-      background-size: cover; 
+      background-size: cover;
       z-index: 1000;
   }  */
+  .formulario {
+    margin: 3% 20%;
+    padding: 2%;
+    border-radius: 50px;
+    background-color: #fff;
+  }
+
+  /* .borda{
+    border: 3px solid red;
+  } */
+
+  .btntipouser {
+    /* border: 0.25rem solid #700A94; */
+    padding: 10px 2px;
+    background-color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  /* .btntipouser:hover{
+    background: transparent;
+    border: 0.25rem solid #c677da;
+  } */
+
+  .background {
+    height: 100%;
+    width: 100%;
+    background-color: #fdef74;
+
+  }
+
+  .fa-briefcase {
+    font-size: 26pt;
+    padding: 4px 3px;
+    color: #f91a6a;
+
+    border: 0.35rem solid #700a94;
+    border-radius: 5px !important;
+  }
+  .fa-briefcase:hover {
+    background: none;
+    color: #ff74e3;
+    border: 0.35rem solid #6f0a9480;
+    border-radius: 5px !important;
+  }
+
+  .fa-code {
+    font-size: 24pt;
+    padding: 4px 0px;
+    color: #f91a6a;
+    border: 0.35rem solid #700a94;
+    border-radius: 5px !important;
+  }
+  .fa-code:hover {
+    background: none;
+    color: #ff74e3;
+    border: 0.35rem solid #6f0a9480;
+    border-radius: 5px !important;
+  }
+   /* .wavebottom {
+  position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #fdef74;
+  } */
+  .wavebottom {
+    position: absolute;
+    left: 0;
+    bottom: -33vh;
+    right: 0;
+    background-color: #fdef74;
+  }
+  /* .wavebottom2 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .wavetop {
+    position: absolute;
+    top: 0;
+    left: 0;
+  } */ */
+
+  /* .imgsize {
+    width: 200%;
+    /* height: auto;
+  } */
+
+  .textinho {
+    font-size: 0.7em;
+  }
+
+  /* esconder o radio de forma responsiva */
+  [type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* p pegar clique no icon*/
+  [type="radio"] + i {
+    cursor: pointer;
+  }
+
+  /* Pós clique*/
+  [type="radio"]:checked + i {
+    background-color: #700a94;
+    /* outline:  0.6rem solid #700A94  ; */
+  }
+
+
+  
