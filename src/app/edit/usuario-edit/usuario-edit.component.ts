@@ -33,18 +33,18 @@ idUsuario: number
     }
     this.idUsuario = this.route.snapshot.params['id']
     this.findByIdUsuario(this.idUsuario)
-  }     
+  }
 
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value
    }
-  
+
    tipoUser(event: any) {
     this.tipoUsuario = event.target.value
    }
-  
-  
-    atualizar() {  
+
+
+    atualizar() {
       this.usuario.empregador = this.tipoUsuario
     console.log(this.usuario)
     if(this.usuario.senha != this.confirmarSenha){
@@ -60,14 +60,14 @@ idUsuario: number
     }
   }
 
-  
+
 
     findByIdUsuario(id: number) {
       this.authService.getByIdUsuario(id).subscribe((resp: Usuario) => {
         this.usuario = resp
       })
     }
-  
-  
-  
+
+
+
   }

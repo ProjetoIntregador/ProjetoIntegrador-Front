@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,10 +25,10 @@ export class ProdutoService {
   }
 
   getByTemaProduto(tema:string):Observable<Produto[]>{
-    return this.http.get<Produto[]>(`https://queryjobs.herokuapp.com/produto/tema/${tema}`)    
+    return this.http.get<Produto[]>(`https://queryjobs.herokuapp.com/produto/tema/${tema}`)
   }
 
-  
+
   deleteProduto(id: number){
     return this.http.delete(`https://queryjobs.herokuapp.com/produto/${id}`)
   }
@@ -41,9 +42,4 @@ export class ProdutoService {
   putProduto(produto: Produto): Observable<Produto>{
     return this.http.put<Produto>('https://queryjobs.herokuapp.com/produto', produto )
   }
-
-
-
 }
-
-

@@ -50,10 +50,10 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-    // if (environment.token == ''){
-    //   this.alertas.showAlertInfo('Sua sessão expirou, faça o login novamente!')
-    //   this.router.navigate(['/entrar'])
-    // }
+    if (environment.token == ''){
+      this.alertas.showAlertInfo('Sua sessão expirou, faça o login novamente!')
+      this.router.navigate(['/entrar'])
+    }
       this.getAllProduto()
       this.getAllCategoria()
 
@@ -78,11 +78,11 @@ export class StartComponent implements OnInit {
       this.categoria = resp
       })
     }
-    // findByIdProduto(){
-    //   this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto)=>{
-    //     this.prod2 = resp
-    //     })
-    //   }
+    findByIdProduto(){
+      this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto)=>{
+        this.prod2 = resp
+        })
+      }
 
   getAllProduto(){
     this.produtoService.getAllProduto().subscribe((resp: Produto[])=>{
@@ -130,5 +130,10 @@ export class StartComponent implements OnInit {
     }
   }
 
+  // curtida(id: number){
+  //   this.authService.putCurtir(id).subscribe(()=>{
+  //     this.getAllProduto()
+  //   })
+  // }
 
 }
