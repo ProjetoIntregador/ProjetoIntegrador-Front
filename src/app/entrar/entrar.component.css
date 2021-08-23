@@ -63,3 +63,7 @@ body {
 .textinho {
   font-size: 0.9em;
 }
+
+.ent:hover{
+opacity: 0.8;
+}

@@ -85,9 +85,9 @@
   font-size: 36px;
   color: #f91a6a !important;
 }
- a .entrar:hover {
-  text-decoration: none;
-  color: #700A94;
+.select-a2:hover {
+
+  color: #820A97 !important;
 }
 .entrar:focus {
   border-radius: 3px;
@@ -133,26 +133,28 @@
   left: 0px;
   top: 1261px;
 }
-/* 
+/*
 .fotoEquipe {
   width: 70%;
 } */
 
 /* Rodapé */
 
-footer {
 
+
+.logodaHomeFooter{
+  width: 20%;
 
 }
-
-
 
 .ondaFooter {
   position: relative;
   bottom: 0;
-  background-image: url(../../assets/imgs/imagensdahome/logoComLetra);
+  background-image: url(https://cdn.discordapp.com/attachments/878400207610589294/878410747313528893/unknown.png);
+  background-size: 20%;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
+  height: 20%;
 
 }
 
@@ -180,6 +182,6 @@ footer {
  }
  .rounded-circle:hover{
    opacity: 0.8;
-   
+
  }
 

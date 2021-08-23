@@ -2,14 +2,15 @@ body {
   padding: 0%;
   margin: 0%;
 }
-small{
+
+small {
   cursor: pointer;
-  color: #700A94;
+  color: #700a94;
 }
 
-.formulario{
-  margin: 3% 10%;
-  padding: 4% 10%;
+.formulario {
+  margin: 3% 20%;
+  padding: 2%;
   border-radius: 50px;
   background-color: #fff;
 }
@@ -19,80 +20,89 @@ small{
 } */
 
 .btntipouser {
-    border: 0.25rem solid #700A94;
-    padding:10px 2px;
-    background-color: #fff;
-    border-radius: 12px;
-    cursor: pointer;
-   justify-content: center;
+  /* border: 0.25rem solid #700A94; */
+  padding: 10px 2px;
+  background-color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  justify-content: center;
 }
 
-.btntipouser:hover{
+/* .btntipouser:hover{
   background: transparent;
   border: 0.25rem solid #c677da;
-}
-
+} */
 
 .background {
   height: 100%;
   width: 100%;
-  background-color: #FDEF74;
+  background-color: #fdef74;
+
 }
 
-.fa-briefcase{
+.fa-briefcase {
   font-size: 26pt;
-  padding: 1px 3px;
-  color: #F91A6A;
-}
-.fa-briefcase:hover{
-    background: none;
-    color: #FF74E3;
+  padding: 4px 3px;
+  color: #f91a6a;
 
+  border: 0.35rem solid #700a94;
+  border-radius: 5px !important;
+}
+.fa-briefcase:hover {
+  background: none;
+  color: #ff74e3;
+  border: 0.35rem solid #6f0a9480;
+  border-radius: 5px !important;
 }
 
-.fa-code{
+.fa-code {
   font-size: 24pt;
-  padding: 2px 0;
-  color: #F91A6A;
+  padding: 4px 0px;
+  color: #f91a6a;
+  border: 0.35rem solid #700a94;
+  border-radius: 5px !important;
 }
-.fa-code:hover{
-    background: none;
-    color: #FF74E3;
-
+.fa-code:hover {
+  background: none;
+  color: #ff74e3;
+  border: 0.35rem solid #6f0a9480;
+  border-radius: 5px !important;
 }
-.wavebottom {
-  position: absolute;
+ /* .wavebottom {
+position: relative;
   bottom: 0;
   left: 0;
-}
-
-.wavebottom2 {
+  background-color: #fdef74;
+} */
+.wavebottom {
   position: absolute;
-  bottom: -22vw;
+  left: 0;
+  bottom: -33vh;
+  right: 0;
+  background-color: #fdef74;
+}
+/* .wavebottom2 {
+  position: relative;
+  bottom: 0;
   left: 0;
 }
 .wavetop {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */ */
 
-
-
-.imgsize {
-  width: 500px;
-  height: auto;
-}
-
-
+/* .imgsize {
+  width: 200%;
+  /* height: auto;
+} */
 
 .textinho {
-  font-size: 0.70em;
+  font-size: 0.7em;
 }
 
-
 /* esconder o radio de forma responsiva */
-[type=radio] { 
+[type="radio"] {
   position: absolute;
   opacity: 0;
   width: 0;
@@ -100,23 +110,20 @@ small{
 }
 
 /* p pegar clique no icon*/
-[type=radio] + i {
+[type="radio"] + i {
   cursor: pointer;
 }
 
 /* Pós clique*/
-[type=radio]:checked + i {
-  background-color: #700A94;
-  outline:  0.6rem solid #700A94  ;
-
-
+[type="radio"]:checked + i {
+  background-color: #700a94;
+  /* outline:  0.6rem solid #700A94  ; */
 }
 
-
-.bolha-cadastro{
+.bolha-cadastro {
   background-image: url(../../assets/imgs/cadastrar/blob.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
- 
+
 }
