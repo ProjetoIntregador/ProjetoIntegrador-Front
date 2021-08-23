@@ -1,23 +1,23 @@
 <div class="bgcinzaclaro fsRubik">
-  <div class=" d-flex justify-content-center  mb-5">
-    <div class="d-flex flex-row justify-content-center align-items-center p-2 bgbrancofeed rounded-pill">
-      <input [(ngModel)]='temaProduto' (keyup)='findByTemaProduto()' type="text" class="form-control b-0"
-        id="temaProduto" name="temaProduto" placeholder="Digite um tipo de trabalho para pesquisar">
+  <div class=" d-flex justify-content-center mb-5">
+    <div class="d-flex flex-row justify-content-center align-items-center w-25  my-4 p-2 bgbrancofeed rounded-pill">
+      <input [(ngModel)]='temaProduto' (keyup)='findByTemaProduto()' type="text" class="form-control b-0 "
+        id="temaProduto" name="temaProduto" placeholder="Pesquise um tipo de trabalho">
     </div>
   </div>
 
   <!-- fonfonfon -->
-  <div class="d-flex justify-content-center ">
+  <div class="d-flex justify-content-center">
     <div class="col-md-8 ">
       <div class="feed p-2">
         <div *ngIf='this.empre == "empregador" || this.empre == "adm"'>
-          <div class="d-flex flex-row justify-content-center align-items-center p-2  bgverdeclaro rounded-pill">
+          <div class="d-flex flex-row justify-content-center align-items-center my-4  bgverdeclaro rounded-pill">
             <button class="btn mr-2 font-weight-bold" data-toggle="modal" data-target="#novaPostagem">Publicar nova
               Vaga</button>
           </div>
         </div>
         <div *ngIf='this.empre == "candidato" || this.empre == "adm"'>
-          <div class="d-flex flex-row justify-content-center align-items-center p-2  bgsalmao rounded-pill">
+          <div class="d-flex flex-row justify-content-center align-items-center my-4  bgsalmao rounded-pill">
             <button class="btn mr-2 font-weight-bold" data-toggle="modal"
               data-target="#promove">Promova-se</button>
           </div>
@@ -42,7 +42,7 @@
                 <i class="fa fa-ellipsis-v text-black-50"></i>
               </button>
               <ul class="dropdown-menu m-t-xs">
-                <li><a [routerLink]="['/produto-edit',item.id]" class="text-info me-3" href="">Editar</a></li>
+                <li><a [routerLink]="['/produto-edit',item.id]" class="text-info me-3 " href="">Editar</a></li>
                 <li><a [routerLink]="['/produto-delete',item.id]" class="text-danger" href="">Apagar</a></li>
                 <!-- <li><a href="#">Editar</a></li>
                     <li><a data-toggle="modal" data-target="#apagarPostagem" (click)="findByIdProduto()">Apagar</a></li> -->
@@ -97,7 +97,7 @@
   <div class="modal-dialog modal-dialog-centered roxoclaro" role="document" >
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
+        <h5 class="modal-title font-weight-bold" id="TituloModalCentralizado">Nova Vaga</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -126,7 +126,7 @@
         </div>
 
         <div class="form-group">
-          <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
+          <label for="categoria">Escolha uma categoria ou <a class="rosamagenta" routerLink='/categoria' data-dismiss="modal">Cadastre
               uma Nova</a></label>
 
           <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'
@@ -149,7 +149,7 @@
   <div class="modal-dialog modal-dialog-centered font-weight-bold roxoescuro" role="document" >
     <div class="modal-content">
       <div class="modal-header ">
-        <h5 class="modal-title" id="TituloModalCentralizado">Promova-se</h5>
+        <h5 class="modal-title font-weight-bold" id="TituloModalCentralizado">Promova-se</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -178,7 +178,7 @@
         </div>
 
         <div class="form-group">
-          <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre
+          <label for="categoria">Escolha uma categoria ou <a class="rosamagenta" routerLink='/categoria' data-dismiss="modal">Cadastre
               uma Nova</a></label>
 
           <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria'

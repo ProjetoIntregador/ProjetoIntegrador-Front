@@ -23,4 +23,8 @@ body {
   background-color: #F6F5F5;
 }
 
+input::placeholder{
+  text-align: center;
+}
+
 
