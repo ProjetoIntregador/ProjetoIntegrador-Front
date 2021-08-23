@@ -1,69 +1,47 @@
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0%;
+  margin: 0%;
+}
+small{
+  cursor: pointer;
+  color: #700A94;
 }
 
-
-.input {
-  position: relative;
-  display: inline-block;
-  border: none;
-  border-bottom: 0.15rem solid #700A94;
-  border-radius: 0;
-  width: 90%;
-  height: 38px;
+.formulario{
+  margin: 3% 10%;
+  padding: 4% 10%;
+  border-radius: 50px;
+  background-color: #fff;
 }
-.input:focus,
-select:focus, .form-group-sm:focus {
 
+/* .borda{
+  border: 3px solid red;
+} */
 
-  outline: 0 !important;
-  border-radius: 5px !important;
-  -webkit-transition: width 0.4s ease !important;
-  transition: width 0.4s ease !important;
-  box-shadow: 0 0 0 0.2rem rgba(249, 26, 108, 0.25) !important; 
-}
-.input:hover{
-    border-color: #F91A6A !important;
-    transition: width 0.4s step-end !important;
-}
 .btntipouser {
-    border: 0.2rem solid #700A94;
+    border: 0.25rem solid #700A94;
+    padding:10px 2px;
     background-color: #fff;
-    padding: 4px;
-    margin: 2%;
     border-radius: 12px;
+    cursor: pointer;
+   justify-content: center;
 }
 
-.btnsucess {
-
-    background-color: #700A94;
-    padding: 8px 6pxn 8px 6px;
-    margin: 5%;
-    border-radius: 25px;
-    color:#fff;
-}
-.btncancel {
-  
-    background-color: #F91A6A ;
-    padding: 8px 6pxn 8px 6px;
-    margin: 5%;
-    border-radius: 25px;
-    color:#fff;
-}
 .btntipouser:hover{
-    background: none;
-    border: 0.2rem solid #FF74E3;
-    text-shadow: darkblue;
+  background: transparent;
+  border: 0.25rem solid #c677da;
 }
+
 
 .background {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-color: #FDEF74;
 }
 
 .fa-briefcase{
-  font-size: 30pt;
+  font-size: 26pt;
+  padding: 1px 3px;
   color: #F91A6A;
 }
 .fa-briefcase:hover{
@@ -73,7 +51,8 @@ select:focus, .form-group-sm:focus {
 }
 
 .fa-code{
-  font-size: 30pt;
+  font-size: 24pt;
+  padding: 2px 0;
   color: #F91A6A;
 }
 .fa-code:hover{
@@ -87,23 +66,18 @@ select:focus, .form-group-sm:focus {
   left: 0;
 }
 
+.wavebottom2 {
+  position: absolute;
+  bottom: -22vw;
+  left: 0;
+}
 .wavetop {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.top {
-  right: -50%;
-  z-index: 1000;
-}
-.blob {
-  
-    right: -18%;
-    z-index: 100;
-    width: 500px;
-    height: auto;
-  }
+
 
 .imgsize {
   width: 500px;
@@ -111,33 +85,38 @@ select:focus, .form-group-sm:focus {
 }
 
 
-.boxhome {
-  position: absolute;
-  margin: 0;
-  width: 430px;
-  height: 750px;
-  left: 4%;
-  top: 0%;
-  background-color: #FFFFFF;
-  border-radius: 50px;
-  z-index: 1000;
-  max-height: 98vh;
-  
-}
 
 .textinho {
   font-size: 0.70em;
 }
 
 
-/* 
-Antiga imagem em fundo
- #img-bg{
-    background-image: url('/assets/imgs/cadastrar/Programmer-cuate-1.png');
-     height: 100vh;
-    min-height: 695px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    z-index: 1000;
-}  */
+/* esconder o radio de forma responsiva */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* p pegar clique no icon*/
+[type=radio] + i {
+  cursor: pointer;
+}
+
+/* Pós clique*/
+[type=radio]:checked + i {
+  background-color: #700A94;
+  outline:  0.6rem solid #700A94  ;
+
+
+}
+
+
+.bolha-cadastro{
+  background-image: url(../../assets/imgs/cadastrar/blob.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}

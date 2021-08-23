@@ -6,7 +6,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { CategoriaComponent } from './categoria/categoria.component';
-import { CategoriaEditeComponent } from './edite/categoria-edite/categoria-edite.component';
+import { CategoriaEditeComponent } from './edit/categoria-edite/categoria-edite.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';

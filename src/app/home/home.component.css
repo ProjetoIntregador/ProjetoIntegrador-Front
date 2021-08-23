@@ -1,259 +1,115 @@
 /* CSS Nav Bar */
 
-.rubik {
-  font-family: "Rubik", sans-serif, Verdana, sans-serif;
-}
+
 .fs12 {
   font-size: 1.3rem;
 }
+
 .back {
   width: 100%;
   height: 100%;
-  /* left: -3px;
-top: 112px; */
   background-color: #fdef74;
-  z-index: -4;
+
 }
+
 .backgroundRosa {
   width: 100%;
   height: 100%;
   background-color: #ff74e3;
-  z-index: -4;
 }
 
 .backgroundRoxo {
-  /* position: absolute;
-  width: 1503px;
-  height: 685px;
-  left: -4px;
-  top: 1619px; */
-  /* height:100vh; */
-
   background-color: #700a94;
-  z-index: -2;
 }
 
 .pessoa {
-  margin-top: 30px;
-  z-index: 3;
+  margin-top: 2%;
 }
 
 .card1 {
   width: 60%;
-
-  z-index: 2;
 }
 
 .card2 {
-  /* position: absolute;
-*/
   width: 45%;
-  /*
-left: 776px;
-top: 507px; */
-  z-index: 2;
 }
 
 .text1 {
-  /* position: absolute;
-    width: 469px;
-    height: 268px;
-    left: 879px;
-    top: 225px; */
-
-  font-family: Rubik;
+  font-family:'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 48px;
-  line-height: 57px;
+  font-size: 36pt;
+  line-height: 2.8rem;
   text-align: justify;
   color: #700a94;
-  z-index: 2;
+}
+.text2 {
+  padding-top: 4%;
+  padding-right: 6%;
+  padding-left: 4%;
+  font-family: 'Rubik' sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26pt;
+  line-height: 2.8rem;
+  text-align: justify;
+  color: #820a97;
+  margin: 0%;
+
+}
+.text3 {
+  padding-top: 8%;
+  padding-left: 4%;
+  font-family:'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28pt;
+  line-height: 2.6rem;
+  text-align: justify;
+  color: #FFE9F1;
 }
 
-.vagas {
-  position: absolute;
-  width: 83px;
-  height: 36px;
-  left: 1042px;
-  top: 37px;
-
-  font-family: Rubik;
+.titles {
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
-  color: #700a94;
-}
-
-.pessoas {
-  position: absolute;
-  width: 115px;
-  height: 36px;
-  left: 1148px;
-  top: 37px;
-
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 34pt;
+  line-height: 3rem;
   color: #700a94;
 }
 
 .entrar {
-  /* position: absolute;
-width: 103px;
-height: 43px;
-left: 1289px;
-top: 30px; */
-
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 36px;
-  line-height: 43px;
   color: #f91a6a !important;
 }
-.imgGene {
+ a .entrar:hover {
+  text-decoration: none;
+  color: #700A94;
+}
+.entrar:focus {
+  border-radius: 3px;
+  padding: 2px;
+  box-shadow: 0 0 0 0.2rem rgba(249, 26, 108, 0.459) !important;
+}
+
+
+.parcerias {
   width: 70%;
   text-align: center;
 }
 
 .circulo1 {
   background-image: url(../../assets/imgs/imagensdahome/circulo1.png);
-  /* width: 399px;
-    height: 391px;
-    left: -69px;
-    top: 231.44px;
-    transform: rotate(-7.55deg); */
   background-repeat: no-repeat;
-  z-index: 1;
 }
 
 .circulo2 {
-  position: relative;
-
-  /* left: 625px;
-top: 85px;
-background: #FF9DF5;
-border-radius: 1000px; */
   background-position: top right;
   background-image: url(../../assets/imgs/imagensdahome/circulo2.png);
   background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.onda1 {
-  position: relative;
-
-  left: 0;
-  right: 0;
-}
-.onda2 {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-/* .foto1{
-/* position: absolute;
-width: 476px;
-height: 437.52px;
-left: 814px;
-top: 977px; */
-/* z-index: 3;
-} */
-
-.text2 {
-  /* position: absolute;
-    width: 654px;
-    height: 337px;
-    left: 66px;
-    top: 1045px; */
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 42px;
-  line-height: 50px;
-  text-align: justify;
-  color: #820a97;
-  z-index: 3;
-}
-
-.foto3 {
-  /* position: absolute;
-    width: 643px;
-    height: 601.65px;
-    left: 51px;
-    top: 1620px; */
-  z-index: 3;
-}
-
-.text3 {
-  /* position: absolute;
-    width: 599px;
-    height: 462px;
-    left: 768px;
-    top: 1758px; */
-
-  padding-top: 10%;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 42px;
-  line-height: 50px;
-  text-align: justify;
-  color: #ffe9f1;
-  z-index: 3;
-}
-
-.text4 {
-  /* width: 300px;
-height: 57px;
-left: 570px;
-top: 3096px; */
-
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 57px;
-  color: #700a94;
-}
-
-.barra1 {
-  position: absolute;
-  width: 1282.04px;
-  height: 0px;
-  left: 76.98px;
-  top: 3005.35px;
-  border: 1px solid #820a97;
-  transform: rotate(0.06deg);
-}
-
-.back2 {
-  position: absolute;
-  z-index: index 1;
-  width: 1443px;
-  height: 685px;
-  left: 0px;
-  top: 1621px;
-  background: #700a94;
-}
-
-.text {
-  position: absolute;
-  width: 210px;
-  height: 57px;
-  left: 612px;
-  top: 2537px;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 57px;
-  color: #700a94;
 }
 
 .parceiros {
@@ -277,48 +133,38 @@ top: 3096px; */
   left: 0px;
   top: 1261px;
 }
-
+/* 
 .fotoEquipe {
   width: 70%;
-}
-/* .fotoEquipe:hover{
-  background-color: #000000 ;
-  } */
+} */
+
 /* Rodapé */
 
 footer {
-  /* position: absolute;
-    width: 1500px;
-    height: 300px;
-    left: 0px;
-    top: 3686px; */
-  background-color: #38106b;
-  z-index: -3;
+
+
 }
 
-.text5 {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.23rem;
-  text-align: center;
-  color: #000000;
-}
-.ondaFooter{
+
+
+.ondaFooter {
   position: relative;
   bottom: 0;
   background-image: url(../../assets/imgs/imagensdahome/logoComLetra);
   background-repeat: no-repeat;
-  background-position: left ;
+  background-position: left;
 
 }
-.opacidade{
+
+.opacidade {
   opacity: 0.80;
 }
-.ferramenta{
-  height:"50"!important;
-  width:"500%"!important;
+
+.ferramenta {
+  height: "50" !important;
+  width: "500%" !important;
 }
+
 /* .github {
   height: 200%;
 }

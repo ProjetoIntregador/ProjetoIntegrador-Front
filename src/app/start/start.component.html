@@ -92,9 +92,9 @@
 
 
 <!-- Inicio da Modal Nova postagem -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+<div class="modal fade font-weight-bold " id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
   aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document" >
+  <div class="modal-dialog modal-dialog-centered roxoclaro" role="document" >
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="TituloModalCentralizado">Nova Vaga</h5>
@@ -136,18 +136,19 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn bgsalmao font-weight-bold " data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn bgverdeclaro font-weight-bold" (click)='publicar()' data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>
 </div>
   <div class="modal fade" id="promove" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
   aria-hidden="true" >
+
   <!-- modal diferente para o candidato  -->
-  <div class="modal-dialog modal-dialog-centered" role="document" >
+  <div class="modal-dialog modal-dialog-centered font-weight-bold roxoescuro" role="document" >
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header ">
         <h5 class="modal-title" id="TituloModalCentralizado">Promova-se</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
@@ -156,23 +157,23 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="titulo">Seu Nome:</label>
-          <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema" id="tema"
+          <input [(ngModel)]='produto.tema' type="text" class="form-control" name="tema2" id="tema2"
             placeholder="Digite o nome da vaga">
         </div>
         <div class="form-group">
           <label for="titulo">Preferência de trabalho</label>
-          <input [(ngModel)]='produto.experiencia' type="text" class="form-control" name="experiencia" id="experiencia"
+          <input [(ngModel)]='produto.experiencia' type="text" class="form-control" name="experiencia" id="experiencia2"
             placeholder="Digite a prefereencia">
         </div>
         <div class="form-group">
           <label for="titulo">Pretenção salarial mínima</label>
-          <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor" id="valor"
+          <input [(ngModel)]='produto.valor' type="number" class="form-control" name="valor2" id="valor2"
             placeholder="Digite o valor">
         </div>
 
         <div class="form-group">
-          <label for="texto">Fala sobre você e qual melhor forma de entrar em contato.</label>
-          <textarea [(ngModel)]='produto.especificacao' class="form-control" name="texto" id="texto"
+          <label for="texto">Fale sobre você e qual melhor forma de entrar em contato.</label>
+          <textarea [(ngModel)]='produto.especificacao' class="form-control" name="texto" id="texto2"
             rows="3"></textarea>
         </div>
 
@@ -187,8 +188,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn bgsalmao  font-weight-bold" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn bgverdeclaro font-weight-bold" (click)='publicar()' data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>

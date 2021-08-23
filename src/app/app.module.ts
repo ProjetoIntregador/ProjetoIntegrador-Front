@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CategoriaComponent } from  './categoria/categoria.component';
 import { StartComponent } from './start/start.component';
-import { CategoriaEditeComponent } from './edite/categoria-edite/categoria-edite.component';
+import { CategoriaEditeComponent } from './edit/categoria-edite/categoria-edite.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';

@@ -7,51 +7,50 @@
   </svg>
   <!-- <div class="wavetop"></div> -->
 
+  <!--  Onda de baixo -->
+  <svg class="wavebottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#FF9DF5" fill-opacity="1"
+      d="M0,96L48,112C96,128,192,160,288,192C384,224,480,256,576,234.7C672,213,768,139,864,90.7C960,43,1056,21,1152,53.3C1248,85,1344,171,1392,213.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
 
+  <div class="d-flex justify-content-around">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-4">
+        <div class="row d-flex justify-content-center  boxhome">
+          <h1>Entrar</h1>
 
+          <form action="" class="d-flex flex-column">
+            <label class="" for="email">Email</label>
+            <input [(ngModel)]='usuarioLogin.email' class="form-control input" type="text" name="email" id="email"
+              placeholder="Digite seu e-mail">
 
+            <label class="" for="senha">Senha</label>
+            <input [(ngModel)]='usuarioLogin.senha' class="form-control input mb-5" type="password" name="senha"
+              id="senha" placeholder="Digite sua senha">
 
-    <!--  Onda de baixo -->
-     <svg class="wavebottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#FF9DF5" fill-opacity="1"
-        d="M0,96L48,112C96,128,192,160,288,192C384,224,480,256,576,234.7C672,213,768,139,864,90.7C960,43,1056,21,1152,53.3C1248,85,1344,171,1392,213.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
+            <button class="btn btnsucess" type="button" (click)='entrar()'>Entrar</button>
 
-    <div class="d-flex justify-content-around">
-      <div class="row d-flex align-items-center">
-        <div class="col-md-4">
-          <div class="row d-flex justify-content-center  boxhome">
-            <h1>Entrar</h1>
-
-            <form action="" class="d-flex flex-column">
-              <label class="invisible" for="email">Email</label>
-              <input [(ngModel)]='usuarioLogin.email' class="form-control input" type="text" name="email" id="email" placeholder="Digite seu e-mail">
-
-              <label class="invisible" for="senha">Senha</label>
-              <input [(ngModel)]='usuarioLogin.senha'class="form-control input mb-5" type="password" name="senha" id="senha" placeholder="Digite sua senha">
-
-              <button class="btnsucess" type="submit" (click)='entrar()' >Entrar</button>
-
-              <p>Ainda não tem conta?<a class="rosamagenta textinho" routerLink='/cadastrar'> Cadastre-se</a></p>
-              <a class="roxoclaro textinho btn" href="#/entrar" routerLink='/home'>Voltar para home</a>
-            </form>
-
-          </div>
-        </div>
-
-        <!-- Imagem -->
-        <div class="col-md-8 bolha">
-
-            <!-- <img class="imgsize" src="../../assets/imgs/logo/bolha.svg" -->
-              <!-- alt="Programador negro, vestido de rosa com cabelo cacheado de frente ao computador codando"> -->
-            <img class="imgsize" src="../../assets/imgs/logo/menina tela login.svg" alt="">
+            <p>Ainda não tem conta?<a class="select-a2 textinho" routerLink='/cadastrar'> Cadastre-se</a></p>
+            <a class="select-a1 textinho btn" href="#/entrar" routerLink='/home'>Voltar para home</a>
+          </form>
 
         </div>
-        </div>
-        </div>
+      </div>
 
-    <!--<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script> -->
+      <!-- Imagem -->
+      <div class="col-md-8 bolha">
+
+        <!-- <img class="imgsize" src="../../assets/imgs/logo/bolha.svg" -->
+
+        <img class="imgsize" src="../../assets/imgs/logo/menina tela login.svg"
+          alt="Programadora negra, vestida de rosa com cabelo liso preso em rabo de cavalo de frente ao computador codando">
+
+      </div>
+    </div>
+  </div>
+
+  <!--<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script> -->
   <!-- </div>
    <footer class="bg-secondary">
     <p class="text-center">
@@ -61,4 +60,3 @@
       </a>
     </p>
   </footer> -->
-
