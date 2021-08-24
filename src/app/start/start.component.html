@@ -16,7 +16,7 @@
               Vaga</button>
           </div>
         </div>
-        <div *ngIf='this.empre == "candidato" || this.empre == "adm"'>
+        <div *ngIf='this.empre == "candidato" '>
           <div class="d-flex flex-row justify-content-center align-items-center my-4  bgsalmao rounded-pill">
             <button class="btn mr-2 font-weight-bold" data-toggle="modal"
               data-target="#promove">Promova-se</button>
@@ -50,7 +50,7 @@
             </div>
 
           </div>
-          <div class="d-flex justify-content-center" *ngIf='this.item.usuario.empregador == "empregador"'>
+          <div class="d-flex justify-content-center" *ngIf='this.item.usuario.empregador == "empregador" || this.item.usuario.empregador == "adm"'>
             <div class="feed-image p-2 px-3">
               <img class="img-fluid img-responsive" height="30%" src="{{item.imagem}}">
             </div>
@@ -64,7 +64,7 @@
               </div>
             </div>
           </div>
-          <div class="d-flex justify-content-center " *ngIf='this.item.usuario.empregador == "candidato"'>
+          <div class="d-flex justify-content-center " *ngIf='this.item.usuario.empregador == "candidato" '>
             <div class="feed-image p-2 px-3">
               <img class="img-fluid img-responsive" height="30%" src="{{item.imagem}}">
             </div>
