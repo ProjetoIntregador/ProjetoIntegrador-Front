@@ -27,7 +27,26 @@
   }
 
 
- 
 
 
-  
+/* esconder o radio de forma responsiva */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* p pegar clique no icon*/
+[type="radio"] + i {
+  cursor: pointer;
+}
+
+/* Pós clique*/
+[type="radio"]:checked + i {
+  background-color: #700a94;
+
+
+}
+
+

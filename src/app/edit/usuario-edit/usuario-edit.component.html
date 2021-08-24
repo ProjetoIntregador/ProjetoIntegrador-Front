@@ -7,7 +7,36 @@
 
               <h4 class="text-center font-weight-bold roxoescuro">Formulário de edição </h4>
 
+              <div class="row borda text-center d-flex justify-content-center">
+                <label class="rosamagenta font-weight-bold text-center" for="tipoUsuario">Selecione seu tipo de
+                  usuário:</label>
+              </div>
+              <div class="row d-flex borda align-itens-center justify-content-around">
 
+                <!-- Empregador -->
+                <div class="col-3 justify-content-center borda">
+
+                  <label class="btntipouser  d-flex" for="empregador">
+                    <input type="radio" id='empregador' name="tipoUsuario" value="empregador" (change)='tipoUser($event)'>
+                    <i class="fas fa-briefcase"></i>
+                  </label>
+                  <label class="  d-flex" id="empregador" for="empregador">
+                    <small class="textinho font-weight-bold  borda">Empregador</small></label>
+
+                </div>
+                <!-- Candidato -->
+                <div class="col-3 justify-content-center  borda ">
+
+                  <label class="btntipouser d-flex" for="candidato">
+                    <input type="radio" id='candidato' name="tipoUsuario" value="candidato" class=""
+                      (change)='tipoUser($event)'>
+                    <i class="fas fa-code"></i>
+                  </label>
+
+                  <label id="candidato" class=" borda d-flex" for="candidato"><small
+                      class="textinho font-weight-bold ">Candidato</small></label>
+                </div>
+              </div>
               <div class="form-group-sm ">
                 <label class="" for="nomeusuario">Digite seu nome:</label>
                 <div class="input-group-text">
@@ -65,7 +94,7 @@
                 <label class="" for="usuario">Senha:</label>
                 <div class="input-group-text">
                   <i class="fas fa-key rosamagenta"></i>
-                  <input (input)='confirmSenha($event)' class="form-control input" type="password" name="senha" id="senha"
+                  <input (input)='confirmSenha($event)' class="form-control input" type="text" name="senha" id="senha"
                     placeholder="Digite sua senha.">
                 </div>
               </div>
@@ -74,7 +103,7 @@
                 <label class="" for="confirmSenha">Confirme sua senha:</label>
                 <div class="input-group-text">
                   <i class="fas fa-key rosamagenta"></i>
-                  <input [(ngModel)]='usuario.senha' class="form-control input" type="password" name="confirmSenha"
+                  <input [(ngModel)]='usuario.senha' class="form-control input" type="text" name="confirmSenha"
                     id="confirmSenha" placeholder="Confirme sua senha.">
                 </div>
               </div>
