@@ -27,4 +27,14 @@ input::placeholder{
   text-align: center;
 }
 
+.verdeclaro:hover{
+  color: #88FF7D;
+  text-decoration: none;
+}
+
+.salmao:hover{
+  color: #F91A6A;
+  text-decoration: none;
+}
+
 
