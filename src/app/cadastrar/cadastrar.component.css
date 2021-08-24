@@ -10,17 +10,16 @@ small {
 
 .formulario {
   margin: 3% 20%;
-  padding: 2%;
+  padding: 5%;
   border-radius: 50px;
   background-color: #fff;
 }
-
+/* A borda é usada apenas para testes de divs do código */
 /* .borda{
   border: 3px solid red;
 } */
 
 .btntipouser {
-  /* border: 0.25rem solid #700A94; */
   padding: 10px 2px;
   background-color: #fff;
   border-radius: 12px;
@@ -28,10 +27,6 @@ small {
   justify-content: center;
 }
 
-/* .btntipouser:hover{
-  background: transparent;
-  border: 0.25rem solid #c677da;
-} */
 
 .background {
   height: 100%;
@@ -68,12 +63,7 @@ small {
   border: 0.35rem solid #6f0a9480;
   border-radius: 5px !important;
 }
- /* .wavebottom {
-position: relative;
-  bottom: 0;
-  left: 0;
-  background-color: #fdef74;
-} */
+
 .wavebottom {
   position: absolute;
   left: 0;
@@ -81,21 +71,6 @@ position: relative;
   right: 0;
   background-color: #fdef74;
 }
-/* .wavebottom2 {
-  position: relative;
-  bottom: 0;
-  left: 0;
-}
-.wavetop {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */ */
-
-/* .imgsize {
-  width: 200%;
-  /* height: auto;
-} */
 
 .textinho {
   font-size: 0.7em;
@@ -117,7 +92,8 @@ position: relative;
 /* Pós clique*/
 [type="radio"]:checked + i {
   background-color: #700a94;
-  /* outline:  0.6rem solid #700A94  ; */
+  
+  
 }
 
 .bolha-cadastro {
