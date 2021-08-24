@@ -105,7 +105,7 @@
   color: #700a94;
   margin: 0%;
   padding: 0%;
- 
+
 }
 
 .parcerias {
@@ -116,7 +116,14 @@
   text-align: center;
   justify-content: center;
 }
-
+.parceriasOM {
+  width: 90%;
+  /* height: auto;
+  padding: 5%;
+  margin: 0%;
+  text-align: center;
+  justify-content: center; */
+}
 .circulo1 {
   background-image: url(../../assets/imgs/imagensdahome/circulo1.png);
   background-repeat: no-repeat;
