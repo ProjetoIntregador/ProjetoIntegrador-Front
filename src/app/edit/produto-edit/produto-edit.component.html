@@ -1,43 +1,43 @@
 <div class="container mt-5 mb-5">
 
     <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center text-secondary">Atualizar Vaga</h1>
+        <div class="col-md-12 font-weight-bold">
+          <h1 class="text-center roxoescuro font-weight-bold">Atualizar Vaga</h1>
         </div>
       </div>
     <div class="row d-flex justify-content-center">
       <div class="col-md-12">
 
 
-<div class="form-group">
+<div class="form-group font-weight-bold roxoescuro">
     <label for="titulo">Vaga</label>
     <input [(ngModel)]='produto.tema'  type="text" class="form-control" name="tema" id="tema" placeholder="Digite o nome da vaga">
   </div>
-  <div class="form-group">
+  <div class="form-group font-weight-bold roxoescuro">
     <label for="titulo">Especificação</label>
     <input [(ngModel)]='produto.especificacao'  type="text" class="form-control" name="especificacao" id="especificacao" placeholder="Digite a especificação">
   </div>
-  <div class="form-group">
+  <div class="form-group font-weight-bold roxoescuro">
     <label for="titulo">Valor</label>
     <input [(ngModel)]='produto.valor'  type="number" class="form-control" name="valor" id="valor" placeholder="Digite o valor">
   </div>
 
-  <div class="form-group">
+  <div class="form-group font-weight-bold roxoescuro">
     <label for="texto">Experiência</label>
     <textarea [(ngModel)]='produto.experiencia' class="form-control" name="texto" id="texto" rows="3"></textarea>
   </div>
 
-  <div class="form-group">
-    <label for="categoria">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">Cadastre uma Nova</a></label>
+  <div class="form-group font-weight-bold roxoescuro">
+    <label for="categoria">Escolha uma categoria ou <a class="rosamagenta" routerLink='/categoria' data-dismiss="modal">Cadastre uma Nova</a></label>
 
     <select class="form-control" name="categoria" id="categoria" [(ngModel)]='idCategoria' (change)='findByIdCategoria'>
       <option *ngFor= 'let item of listaCategoria' value="{{item.id}}">{{item.descricao}}</option>
     </select>
   </div>
 
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" routerLink='/start'>Cancelar</button>
-  <button type="button" class="btn btn-warning" (click)='atualizar()' >Publicar</button>
+<div class="modal-footer font-weight-bold ">
+  <button type="button" class=" btn bgsalmao font-weight-bold" routerLink='/start'>Cancelar</button>
+  <button type="button" class=" btn bgverdeclaro font-weight-bold " (click)='atualizar()' >Publicar</button>
 </div>
 
 

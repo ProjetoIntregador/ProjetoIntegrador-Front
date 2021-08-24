@@ -38,9 +38,9 @@
   font-family:'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 36pt;
+  font-size: 28pt;
   line-height: 2.8rem;
-  text-align: justify;
+  text-align: left;
   color: #700a94;
 }
 .text2 {
@@ -95,12 +95,35 @@
   box-shadow: 0 0 0 0.2rem rgba(249, 26, 108, 0.459) !important;
 }
 
+.sobre{
+  padding:0%;
+  font-family: 'Roboto' sans-serif, Verdana;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14pt;
+  text-align: left;
+  color: #700a94;
+  margin: 0%;
+  padding: 0%;
 
-.parcerias {
-  width: 70%;
-  text-align: center;
 }
 
+.parcerias {
+  width: 50%;
+  height: auto;
+  padding: 5%;
+  margin: 0%;
+  text-align: center;
+  justify-content: center;
+}
+.parceriasOM {
+  width: 90%;
+  /* height: auto;
+  padding: 5%;
+  margin: 0%;
+  text-align: center;
+  justify-content: center; */
+}
 .circulo1 {
   background-image: url(../../assets/imgs/imagensdahome/circulo1.png);
   background-repeat: no-repeat;
@@ -185,3 +208,17 @@
 
  }
 
+ .btn-collapse:focus{
+  cursor: pointer;
+  outline: 0 !important;
+  border-radius: 3px !important;
+  border-color: #F91A6A !important;
+  box-shadow: 0 -0.1rem 0 0.2rem #6f0a9480 !important;
+
+ }
+
+.btn:focus {
+
+  border-radius: 3px ;
+  box-shadow: 0 0 0 0.2rem #6f0a9480;
+}

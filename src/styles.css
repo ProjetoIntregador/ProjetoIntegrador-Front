@@ -1,5 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 /* Fontes */
+a{
+  color: #F91A6A !important;
+  text-decoration: none !important;
+}
+a:hover{
+  color: #6f0a9480!important;
+  text-decoration: none !important;
+}
+a:focus{
+
+  border-radius: 3px !important;
+
+  box-shadow: 0 0 0 0.2rem #6f0a9480 !important;
+}
 .fsRubik {
   font-family: Rubik;
 }
@@ -118,9 +132,6 @@ span {
     background-color: #C9FFC5 !important;
 }
 
-/* .bgrodape{
-  background-color: #5000CA;
-} */
 .bgverdeescuro {
   background-color: #88FF7D !important;
 }
@@ -134,11 +145,6 @@ span {
 }
 
 .wavebottom {
-  /* background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 80%;
-  height: 80%; */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -146,11 +152,6 @@ span {
 }
 
 .wavetop {
-  /* background-image: url(../../assets/imgs/logo/wavetop.svg); */
-  /* background-repeat: no-repeat;
-  background-position: top;
-  width: 100vw;
-  height: 100vh; */
   position: absolute;
   top: 0;
   left: 0;
@@ -191,7 +192,7 @@ span {
   outline: 0 !important;
   border-radius: 3px !important;
   border-color: #F91A6A !important;
-  box-shadow: 0 -0.1rem 0 0.2rem rgba(249, 26, 108, 0.39) !important;
+  box-shadow: 0 -0.1rem 0 0.2rem #6f0a9480 !important;
 }
 
 .input:hover {

@@ -10,23 +10,23 @@ body {
 }
 
 .select-a1 {
-  color: #700A94;
+  color: #700A94 !important;
 }
 
 .select-a1:hover {
-  text-decoration: none;
-  color: #F91A6A;
+  text-decoration: none !important;
+  color: #F91A6A !important;
 }
 
 
 .select-a2 {
 
-  color: #F91A6A;
+  color: #F91A6A !important;
 }
 
 .select-a2:hover {
   text-decoration: none;
-  color: #700A94;
+  color: #700A94 !important;
 }
 
 .select-a1:focus,
